@@ -21,3 +21,29 @@
 .concept-evidence li p{font-size:.86rem;line-height:1.55;color:#414a60;margin:6px 0 0}
 .concept-evidence .resource-format{font-size:.65rem;margin-bottom:5px}
 .concept-evidence .evidence-reviewed{font-size:.75rem;color:var(--muted);margin:17px 0 0}
+
+.discovery-heading{display:flex;gap:17px;align-items:flex-start;margin-bottom:4px}
+.discovery-heading h1{margin:0}
+.discovery-spark{width:54px;height:54px;flex:0 0 54px;display:grid;place-items:center;border-radius:17px;background:#e8efff;color:var(--blue);font-size:1.8rem;box-shadow:0 4px 0 #c7d8ff}
+.discovery-kicker{color:var(--blue);font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 5px}
+.discovery-instruction{color:var(--muted);font-size:.9rem;margin:18px 0 15px}
+.discovery-grid{display:grid;gap:11px}
+.discovery-card{display:flex;align-items:center;gap:16px;width:100%;border:2px solid #dce5f6;border-bottom-width:4px;background:#fff;border-radius:15px;text-align:left;padding:14px 18px;min-height:72px;font-size:.96rem;line-height:1.45;transition:transform .15s,border-color .15s,background .15s}
+.discovery-card:hover:not(:disabled){transform:translateY(-2px);border-color:#9bb5fc;background:#f7faff}
+.discovery-card.is-right{background:#eaf6f0;border-color:#6baf84}
+.discovery-card.is-wrong{background:#fff5eb;border-color:#da9b6e}
+.discovery-card:disabled{opacity:1;cursor:default}
+.discovery-card-mark{width:34px;height:34px;flex:0 0 34px;display:grid;place-items:center;border-radius:10px;background:#e8efff;color:var(--blue);font-weight:800;font-size:1.15rem}
+.discovery-card.is-right .discovery-card-mark{background:#ccebd8;color:#205e39}
+.discovery-card.is-wrong .discovery-card-mark{background:#ffe3ce;color:#945321}
+.discovery-feedback{border-radius:15px;padding:17px 19px;margin:17px 0 20px}
+.discovery-feedback:focus{outline:2px solid #3155e7;outline-offset:3px}
+.discovery-feedback.success{background:#eaf6f0;color:#205e39}
+.discovery-feedback.retry{background:#fff5eb;color:#784319}
+.discovery-feedback strong{display:block;font-size:.95rem;margin-bottom:5px}
+.discovery-feedback p{font-size:.94rem;line-height:1.55;margin:0;color:var(--ink)}
+.lesson-resources{border-top:1px solid var(--line);margin-top:27px;padding-top:14px}
+.lesson-resources>summary{cursor:pointer;font-weight:700;color:var(--blue);font-size:.86rem;padding:8px 0}
+.lesson-resources .concept-evidence{margin-top:13px;padding-top:14px}
+.lesson-resources .learn-more{margin-top:18px;padding-top:16px}
+@media(max-width:600px){.discovery-heading{gap:12px}.discovery-spark{width:43px;height:43px;flex-basis:43px;border-radius:13px;font-size:1.4rem}.discovery-card{min-height:68px;padding:12px 13px;gap:11px;font-size:.9rem}.discovery-card-mark{width:30px;height:30px;flex-basis:30px}.discovery-instruction{font-size:.84rem;margin:14px 0 12px}}

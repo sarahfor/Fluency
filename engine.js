@@ -1,7 +1,7 @@
 export const freshState=()=>({version:1,xp:0,days:{},awards:[],completed:[],missed:[],seen:[],sessions:{},practiceCount:0});
 export function dayKey(date=new Date()){return `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`;}
 export function streak(days,now=new Date()){let cursor=new Date(now.getFullYear(),now.getMonth(),now.getDate(),12),count=0;if(!days[dayKey(cursor)])cursor.setDate(cursor.getDate()-1);while(days[dayKey(cursor)]){count++;cursor.setDate(cursor.getDate()-1);}return count;}
-export function makeSession(lesson,questionIds,review=false){return {lesson,review,stage:review?'question':'intro',intro:0,queue:[...questionIds],original:[...questionIds],index:0,selected:null,checked:false,correct:false,attempted:[],firstCorrect:0,earned:0,finished:false};}
+export function makeSession(lesson,questionIds,review=false){return {lesson,review,stage:review?'question':'intro',intro:0,introChoice:null,queue:[...questionIds],original:[...questionIds],index:0,selected:null,checked:false,correct:false,attempted:[],firstCorrect:0,earned:0,finished:false};}
 export function award(state,key,points,today=dayKey()){const id=`${today}:${key}`;if(state.awards.includes(id))return 0;state.awards.push(id);state.xp+=points;state.days[today]=(state.days[today]||0)+points;return points;}
 export function submitAnswer(state,session,question,selection,today=dayKey()){
   if(session.stage!=='question'||session.checked||!Number.isInteger(selection)||selection<0||selection>=question.options.length)return false;
@@ -34,7 +34,7 @@ export function loadState(raw,content){
     if(['queue','original','attempted'].some(k=>!Array.isArray(s[k])||s[k].length>2000||s[k].some(id=>!qs.has(id))))continue;
     if(!s.original.length||!Number.isInteger(s.index)||s.index<0||s.index>s.queue.length||!Number.isInteger(s.intro)||s.intro<0||s.intro>3)continue;
     if(s.stage==='question'&&s.index>=s.queue.length)continue;
-    if(![null,0,1,2].includes(s.selected)||typeof s.checked!=='boolean'||typeof s.review!=='boolean'||typeof s.correct!=='boolean')continue;
+    if(![null,0,1,2].includes(s.selected)||![undefined,null,0,1,2].includes(s.introChoice)||typeof s.checked!=='boolean'||typeof s.review!=='boolean'||typeof s.correct!=='boolean')continue;
     if(!Number.isSafeInteger(s.firstCorrect)||s.firstCorrect<0||s.firstCorrect>s.original.length||!Number.isSafeInteger(s.earned)||s.earned<0)continue;
     if(key!==s.lesson||s.review!==(key==='review'))continue;
     const lesson=content.lessons.find(l=>l.id===s.lesson);
