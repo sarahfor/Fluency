@@ -34,6 +34,7 @@
 .discovery-card.is-wrong{background:#fff5eb;border-color:#da9b6e}
 .discovery-card:disabled{opacity:1;cursor:default}
 .discovery-card-mark{width:34px;height:34px;flex:0 0 34px;display:grid;place-items:center;border-radius:10px;background:#e8efff;color:var(--blue);font-weight:800;font-size:1.15rem}
+.discovery-card-label{font-weight:700;font-size:1.05rem;letter-spacing:-.015em}
 .discovery-card.is-right .discovery-card-mark{background:#ccebd8;color:#205e39}
 .discovery-card.is-wrong .discovery-card-mark{background:#ffe3ce;color:#945321}
 .discovery-feedback{border-radius:15px;padding:17px 19px;margin:17px 0 20px}
@@ -42,8 +43,9 @@
 .discovery-feedback.retry{background:#fff5eb;color:#784319}
 .discovery-feedback strong{display:block;font-size:.95rem;margin-bottom:5px}
 .discovery-feedback p{font-size:.94rem;line-height:1.55;margin:0;color:var(--ink)}
+.discovery-feedback .discovery-example{font-size:.88rem;margin-top:8px;color:#3d5a4b}
 .lesson-resources{border-top:1px solid var(--line);margin-top:27px;padding-top:14px}
 .lesson-resources>summary{cursor:pointer;font-weight:700;color:var(--blue);font-size:.86rem;padding:8px 0}
 .lesson-resources .concept-evidence{margin-top:13px;padding-top:14px}
 .lesson-resources .learn-more{margin-top:18px;padding-top:16px}
-@media(max-width:600px){.discovery-heading{gap:12px}.discovery-spark{width:43px;height:43px;flex-basis:43px;border-radius:13px;font-size:1.4rem}.discovery-card{min-height:68px;padding:12px 13px;gap:11px;font-size:.9rem}.discovery-card-mark{width:30px;height:30px;flex-basis:30px}.discovery-instruction{font-size:.84rem;margin:14px 0 12px}}
+@media(max-width:600px){.discovery-heading{gap:12px}.discovery-spark{width:43px;height:43px;flex-basis:43px;border-radius:13px;font-size:1.4rem}.discovery-card{min-height:68px;padding:12px 13px;gap:11px;font-size:.9rem}.discovery-card-mark{width:30px;height:30px;flex-basis:30px}.discovery-card-label{font-size:.96rem}.discovery-instruction{font-size:.84rem;margin:14px 0 12px}}
