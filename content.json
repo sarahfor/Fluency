@@ -1,0 +1,1016 @@
+{
+  "sources": [
+    {
+      "id": "google-ml",
+      "title": "Google · Machine Learning Glossary",
+      "url": "https://developers.google.com/machine-learning/glossary",
+      "description": "Definitions of AI, models, and machine learning. Lesson wording and scenarios are original."
+    },
+    {
+      "id": "google-cloud",
+      "title": "Google · Generative AI Glossary",
+      "url": "https://docs.cloud.google.com/docs/generative-ai/glossary",
+      "description": "Reference for prompts, tokens, grounding, and agents.",
+      "format": "Technical glossary",
+      "citation": "Google Cloud",
+      "verified": "2026-09-29"
+    },
+    {
+      "id": "anthropic",
+      "title": "Anthropic · AI Fluency Terminology",
+      "url": "https://www-cdn.anthropic.com/4396730ed190e691a3712cf2fd6bfe35509deca2.pdf",
+      "description": "Beginner terminology by Rick Dakan, Joseph Feller, and Anthropic. Source material: CC BY-NC-SA 4.0.",
+      "format": "Educational framework",
+      "citation": "Rick Dakan, Joseph Feller & Anthropic",
+      "verified": "2026-09-29"
+    },
+    {
+      "id": "google-automation",
+      "title": "Google · Automation and AI",
+      "url": "https://cloud.google.com/discover/what-is-robotic-process-automation",
+      "description": "Explains how rule-based automation differs from AI.",
+      "format": "Official technical explainer",
+      "citation": "Google Cloud",
+      "verified": "2026-09-29"
+    },
+    {
+      "id": "google-pair",
+      "title": "Google PAIR · Mental Models",
+      "url": "https://pair.withgoogle.com/chapter/mental-models/",
+      "description": "Design guidance for gradual introductions, realistic expectations, and experimentation.",
+      "format": "Design guidance",
+      "citation": "Google · People + AI Guidebook",
+      "verified": "2026-09-29"
+    },
+    {
+      "id": "nielsen",
+      "title": "Jakob Nielsen · Usability Heuristics",
+      "url": "https://www.nngroup.com/articles/ten-usability-heuristics/",
+      "description": "Guidance for clear feedback, familiar language, visible controls, and error recovery."
+    },
+    {
+      "id": "microsoft",
+      "title": "Microsoft Research · Human–AI Interaction",
+      "url": "https://www.microsoft.com/en-us/research/publication/guidelines-for-human-ai-interaction/",
+      "description": "Research-derived guidelines for human–AI interaction, including communicating capabilities and limitations. This paper does not evaluate Fluent or establish its learning effectiveness.",
+      "format": "Research paper",
+      "citation": "Amershi et al. · CHI 2019",
+      "verified": "2026-09-29"
+    },
+    {
+      "id": "google-embedding-space",
+      "title": "Word embeddings, explained",
+      "url": "https://developers.google.com/machine-learning/crash-course/embeddings/embedding-space",
+      "description": "See how words can be represented as numbers, with nearby positions reflecting learned relationships.",
+      "format": "Visual guide",
+      "level": "Start here",
+      "citation": "Google · Machine Learning Crash Course",
+      "verified": "2026-09-26"
+    },
+    {
+      "id": "word-embedding-bias-paper",
+      "title": "Gender bias in word embeddings",
+      "url": "https://arxiv.org/pdf/1607.06520",
+      "description": "Research showing how word embeddings trained on text can encode gender stereotypes. This 2016 study examines static word embeddings, rather than today’s chatbots.",
+      "format": "Research paper · PDF",
+      "level": "Deeper reading",
+      "citation": "Bolukbasi, Chang, Zou, Saligrama & Kalai · 2016",
+      "publicationTitle": "Man is to Computer Programmer as Woman is to Homemaker? Debiasing Word Embeddings",
+      "verified": "2026-09-29"
+    },
+    {
+      "id": "banaji-ai-bias-video",
+      "title": "Mahzarin Banaji on AI and implicit bias",
+      "url": "https://www.youtube.com/watch?v=SxtSkKxxO3Q",
+      "description": "A psychologist discusses how language reveals societal stereotypes and why bias matters for AI.",
+      "format": "Video",
+      "citation": "Harvard Business School · 2024",
+      "publicationTitle": "AI & Inequality | Harvard psychologist Mahzarin Banaji on AI, implicit bias, and social ethics",
+      "verified": "2026-09-26"
+    },
+    {
+      "id": "google-genai-video",
+      "title": "Introduction to generative AI",
+      "url": "https://www.youtube.com/watch?v=G2fqAlgmoPo",
+      "description": "An introduction to generative AI, common applications, and different model types.",
+      "format": "Video",
+      "citation": "Google Cloud Tech · 2023",
+      "verified": "2026-09-26"
+    },
+    {
+      "id": "google-llm-video",
+      "title": "Introduction to large language models",
+      "url": "https://www.youtube.com/watch?v=zizonToFXDs",
+      "description": "Explains what language models do and how prompts help guide their responses.",
+      "format": "Video",
+      "citation": "Google Cloud Tech · 2023",
+      "verified": "2026-09-26"
+    },
+    {
+      "id": "openai-prompt-guide",
+      "title": "Give clearer instructions to AI",
+      "url": "https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt",
+      "description": "Practice giving clear instructions, adding useful context, and refining a response, using examples for ChatGPT.",
+      "format": "Short guide",
+      "citation": "OpenAI · ChatGPT Help Center",
+      "verified": "2026-09-26"
+    },
+    {
+      "id": "openai-tokens-guide",
+      "title": "Understanding and counting tokens",
+      "url": "https://help.openai.com/en/articles/4936856-understanding-and-counting-tokens",
+      "description": "See how text becomes tokens and how input and output fit within model limits.",
+      "format": "Technical explainer",
+      "citation": "OpenAI · Help Center",
+      "verified": "2026-09-29"
+    },
+    {
+      "id": "openai-truth-guide",
+      "title": "Why confident AI answers can be wrong",
+      "url": "https://help.openai.com/en/articles/8313428-does-chatgpt-tell-the-truth",
+      "description": "Learn about ChatGPT’s limitations and how to check claims against sources.",
+      "format": "Short guide",
+      "citation": "OpenAI · ChatGPT Help Center",
+      "verified": "2026-09-26"
+    },
+    {
+      "id": "anthropic-fluency-framework",
+      "title": "The AI Fluency Framework",
+      "url": "https://www-cdn.anthropic.com/334975cdec18f744b4fa511dc8518bd8d119d29d.pdf",
+      "description": "A compact guide to deciding when to use AI, collaborating with it, and evaluating its work.",
+      "format": "One-page guide · PDF",
+      "citation": "Rick Dakan, Joseph Feller & Anthropic",
+      "verified": "2026-09-26"
+    },
+    {
+      "id": "anthropic-effective-agents",
+      "title": "How agents use tools and feedback",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "description": "A technical explanation of agents and how they differ from predefined workflows.",
+      "format": "Engineering article",
+      "level": "Deeper reading",
+      "citation": "Anthropic · 2024",
+      "publicationTitle": "Building effective agents",
+      "verified": "2026-09-29"
+    },
+    {
+      "id": "google-ai-definition",
+      "title": "Google · Artificial intelligence",
+      "url": "https://developers.google.com/machine-learning/glossary#artificial-intelligence",
+      "format": "Technical glossary",
+      "citation": "Google · Machine Learning Glossary",
+      "description": "Defines AI through capabilities such as recognition, language, and prediction.",
+      "verified": "2026-09-29"
+    },
+    {
+      "id": "tensorflow-classification",
+      "title": "TensorFlow · Image classification",
+      "url": "https://www.tensorflow.org/tutorials/images/classification",
+      "format": "Technical tutorial",
+      "citation": "TensorFlow · Official documentation",
+      "description": "A worked example of training and evaluating an image classifier. The lesson’s dog example is an illustration, not a result from this tutorial.",
+      "verified": "2026-09-29"
+    },
+    {
+      "id": "imagenet-research",
+      "title": "ImageNet classification with deep convolutional neural networks",
+      "url": "https://papers.nips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html",
+      "format": "Research paper",
+      "citation": "Krizhevsky, Sutskever & Hinton · NeurIPS 2012",
+      "description": "Original research on learning image categories from labeled examples. Its measured results apply to that study, not to this app’s illustration.",
+      "verified": "2026-09-29"
+    },
+    {
+      "id": "google-recommendations",
+      "title": "Google · Recommendation systems",
+      "url": "https://developers.google.com/machine-learning/recommendation/overview",
+      "format": "Technical course",
+      "citation": "Google · Machine Learning",
+      "description": "Explains recommending existing items, such as videos, rather than generating those items.",
+      "verified": "2026-09-29"
+    },
+    {
+      "id": "google-model-definition",
+      "title": "Google · Model",
+      "url": "https://developers.google.com/machine-learning/glossary#model",
+      "format": "Technical glossary",
+      "citation": "Google · Machine Learning Glossary",
+      "description": "Explains what a machine-learning model is and how it makes predictions.",
+      "verified": "2026-09-29"
+    },
+    {
+      "id": "openai-models-explained",
+      "title": "OpenAI Academy · Models and ChatGPT",
+      "url": "https://academy.openai.com/public/clubs/work-users-ynjqu/resources/models",
+      "format": "Official educational guide",
+      "citation": "OpenAI Academy",
+      "description": "Explains the distinction between an app and its underlying models. Used here for that distinction, not as a current model-availability list.",
+      "verified": "2026-09-29"
+    },
+    {
+      "id": "claude-prompting",
+      "title": "Anthropic · Prompting best practices",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices",
+      "format": "Technical documentation",
+      "citation": "Anthropic · Claude documentation",
+      "description": "Guidance on clear instructions, relevant context, and examples. Better prompts do not guarantee correct answers.",
+      "verified": "2026-09-29"
+    },
+    {
+      "id": "few-shot-research",
+      "title": "Language models are few-shot learners",
+      "url": "https://arxiv.org/abs/2005.14165",
+      "format": "Research paper",
+      "citation": "Brown et al. · NeurIPS 2020",
+      "description": "Studies GPT-3 using instructions and examples at inference time without parameter updates. This does not establish a provider’s data-retention or future-training policy.",
+      "verified": "2026-09-29"
+    },
+    {
+      "id": "google-prediction",
+      "title": "Google · Prediction and inference",
+      "url": "https://developers.google.com/machine-learning/glossary#prediction",
+      "format": "Technical glossary",
+      "citation": "Google · Machine Learning Glossary",
+      "description": "Defines a prediction as a model’s output when given input.",
+      "verified": "2026-09-29"
+    },
+    {
+      "id": "google-llm-course",
+      "title": "Google · Large language models",
+      "url": "https://developers.google.com/machine-learning/crash-course/llm",
+      "format": "Technical course",
+      "citation": "Google · Machine Learning Crash Course",
+      "description": "Introduces language models, learned language patterns, and token prediction.",
+      "verified": "2026-09-29"
+    },
+    {
+      "id": "claude-context-windows",
+      "title": "Anthropic · Context windows",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/context-windows",
+      "format": "Technical documentation",
+      "citation": "Anthropic · Claude documentation",
+      "description": "Explains token capacity across input and generated output. Exact accounting and limits depend on the model.",
+      "verified": "2026-09-29"
+    },
+    {
+      "id": "lost-in-middle",
+      "title": "Lost in the middle: how language models use long contexts",
+      "url": "https://aclanthology.org/2024.tacl-1.9/",
+      "format": "Research paper",
+      "citation": "Liu et al. · Transactions of the ACL, 2024",
+      "description": "Finds that using information can depend on its position in long inputs in the models and tasks tested. A large context window is not a guarantee of reliable recall.",
+      "verified": "2026-09-29"
+    },
+    {
+      "id": "nist-confabulation",
+      "title": "NIST · Confabulation and factual reliability",
+      "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf#page=10",
+      "format": "Risk-management guidance",
+      "citation": "NIST AI 600-1 · 2024 · Section 2.2",
+      "description": "Describes confidently stated false or erroneous generated content, including fabricated citations. NIST uses the term confabulation.",
+      "verified": "2026-09-29"
+    },
+    {
+      "id": "nist-verification",
+      "title": "NIST · Verify generated sources and claims",
+      "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf#page=34",
+      "format": "Risk-management guidance",
+      "citation": "NIST AI 600-1 · 2024 · MS-2.5-003",
+      "description": "Recommends reviewing and verifying generated sources and citations. A missing citation by itself does not establish that a claim is false.",
+      "verified": "2026-09-29"
+    },
+    {
+      "id": "nist-bias",
+      "title": "NIST · Harmful bias and homogenization",
+      "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf#page=12",
+      "format": "Risk-management guidance",
+      "citation": "NIST AI 600-1 · 2024 · Section 2.6",
+      "description": "Discusses harmful bias and stereotyping in generative AI. The fictional role-assignment exercise is not a measurement of any model.",
+      "verified": "2026-09-29"
+    },
+    {
+      "id": "google-grounding",
+      "title": "Google · Grounding overview",
+      "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/grounding/overview",
+      "format": "Technical documentation",
+      "citation": "Google Cloud",
+      "description": "Explains connecting generated responses to information sources. A source link alone does not demonstrate that an answer used or correctly represented that source.",
+      "verified": "2026-09-29"
+    },
+    {
+      "id": "summary-factuality",
+      "title": "On faithfulness and factuality in abstractive summarization",
+      "url": "https://aclanthology.org/2020.acl-main.173/",
+      "format": "Research paper",
+      "citation": "Maynez, Narayan, Bohnet & McDonald · ACL 2020",
+      "description": "Studies unfaithful content in generated summaries. Its findings concern the summarization systems and datasets evaluated.",
+      "verified": "2026-09-29"
+    },
+    {
+      "id": "claude-permissions",
+      "title": "Anthropic · Agent permission policies",
+      "url": "https://platform.claude.com/docs/en/managed-agents/permission-policies",
+      "format": "Technical documentation",
+      "citation": "Anthropic · Claude documentation",
+      "description": "Shows how an application configures tool access and approvals. A model’s stated intention is not an enforced permission boundary.",
+      "verified": "2026-09-29"
+    }
+  ],
+  "terms": [
+    {
+      "id": "ai",
+      "name": "Artificial intelligence (AI)",
+      "definition": "Software that performs tasks such as recognizing images, interpreting language, or generating content.",
+      "example": "A photo app recognizes the dogs in your pictures.",
+      "source": "google-ai-definition",
+      "learnMore": [
+        "imagenet-research",
+        "google-genai-video"
+      ],
+      "evidence": [
+        {
+          "source": "google-ai-definition",
+          "supports": "AI includes capabilities such as recognition and prediction."
+        },
+        {
+          "source": "tensorflow-classification",
+          "supports": "A trained image classifier predicts a category for an image; its prediction can be wrong."
+        },
+        {
+          "source": "google-recommendations",
+          "supports": "Recommendation systems can suggest existing items without creating new content."
+        }
+      ],
+      "reviewed": "2026-09-29"
+    },
+    {
+      "id": "genai",
+      "name": "Generative AI",
+      "definition": "AI that creates content using patterns learned from data.",
+      "example": "You ask for a picture of a tiny library on the moon.",
+      "source": "google-cloud",
+      "learnMore": [
+        "google-genai-video"
+      ],
+      "evidence": [
+        {
+          "source": "google-cloud",
+          "supports": "Generative models produce content from learned patterns and the supplied input."
+        }
+      ],
+      "reviewed": "2026-09-29"
+    },
+    {
+      "id": "model",
+      "name": "Model",
+      "definition": "The mathematical system that processes inputs to produce predictions or other outputs.",
+      "example": "One chat app can offer several models to choose from.",
+      "source": "google-model-definition",
+      "learnMore": [
+        "google-genai-video",
+        "google-llm-video"
+      ],
+      "evidence": [
+        {
+          "source": "google-model-definition",
+          "supports": "A trained model processes input to produce predictions."
+        },
+        {
+          "source": "openai-models-explained",
+          "supports": "ChatGPT is an app; underlying models process requests. One app can provide access to multiple models."
+        }
+      ],
+      "reviewed": "2026-09-29"
+    },
+    {
+      "id": "prompt",
+      "name": "Prompt",
+      "definition": "The request and material you give an AI model.",
+      "example": "“Suggest three rainy-day activities using things at home.”",
+      "source": "google-cloud",
+      "learnMore": [
+        "openai-prompt-guide"
+      ],
+      "evidence": [
+        {
+          "source": "google-cloud",
+          "supports": "A prompt is input supplied to a generative model."
+        },
+        {
+          "source": "claude-prompting",
+          "supports": "Clear tasks, constraints, and relevant details give the model direction."
+        }
+      ],
+      "reviewed": "2026-09-29"
+    },
+    {
+      "id": "context",
+      "name": "Context",
+      "definition": "Information available to the model that can help it respond to your request.",
+      "example": "You add: “Two adults, one child, and only an hour.”",
+      "source": "claude-prompting",
+      "learnMore": [
+        "openai-prompt-guide"
+      ],
+      "evidence": [
+        {
+          "source": "claude-prompting",
+          "supports": "Relevant context can help shape a response."
+        },
+        {
+          "source": "few-shot-research",
+          "supports": "Using supplied context during inference does not itself update the model’s learned parameters."
+        }
+      ],
+      "reviewed": "2026-09-29"
+    },
+    {
+      "id": "output",
+      "name": "Output",
+      "definition": "The result an AI system returns, such as text, an image, or a prediction.",
+      "example": "The three activity suggestions returned by the AI are its output.",
+      "source": "google-prediction",
+      "learnMore": [
+        "openai-prompt-guide",
+        "openai-truth-guide"
+      ],
+      "evidence": [
+        {
+          "source": "google-prediction",
+          "supports": "The result a model returns is its output."
+        },
+        {
+          "source": "google-cloud",
+          "supports": "Generative-model outputs can include text and images."
+        }
+      ],
+      "reviewed": "2026-09-29"
+    },
+    {
+      "id": "llm",
+      "name": "Large language model (LLM)",
+      "definition": "A model trained on large amounts of language data to learn patterns used in processing and generating text.",
+      "example": "An LLM helps turn your rough notes into a birthday speech.",
+      "source": "google-llm-course",
+      "learnMore": [
+        "google-llm-video",
+        "google-embedding-space"
+      ],
+      "evidence": [
+        {
+          "source": "google-llm-course",
+          "supports": "Language models learn patterns from training data and generate sequences of tokens."
+        }
+      ],
+      "reviewed": "2026-09-29"
+    },
+    {
+      "id": "token",
+      "name": "Token",
+      "definition": "For text, a unit a model processes, such as a character, word fragment, word, or punctuation mark.",
+      "example": "A single long word may be split into several tokens.",
+      "source": "openai-tokens-guide",
+      "learnMore": [
+        "openai-tokens-guide"
+      ],
+      "evidence": [
+        {
+          "source": "openai-tokens-guide",
+          "supports": "Text tokens can be characters, word fragments, words, or punctuation; their boundaries depend on the tokenizer."
+        }
+      ],
+      "reviewed": "2026-09-29"
+    },
+    {
+      "id": "context-window",
+      "name": "Context window",
+      "definition": "The amount of information a language model can work with in one request, measured in tokens.",
+      "example": "Instructions, available chat history, supplied material, and the generated response use this space. Exact limits depend on the model.",
+      "source": "claude-context-windows",
+      "learnMore": [
+        "openai-tokens-guide"
+      ],
+      "evidence": [
+        {
+          "source": "claude-context-windows",
+          "supports": "Context capacity includes input and generated output. The app determines which history and material it supplies."
+        },
+        {
+          "source": "lost-in-middle",
+          "supports": "A larger context window does not guarantee that every detail will be used correctly; this study tested specific models and tasks."
+        }
+      ],
+      "reviewed": "2026-09-29"
+    },
+    {
+      "id": "hallucination",
+      "name": "Hallucination",
+      "definition": "Generated information presented as factual even though it is false or unsupported by the relevant source.",
+      "example": "Asked to recommend a real novel, an AI supplies a made-up title as though it exists.",
+      "source": "nist-confabulation",
+      "learnMore": [
+        "openai-truth-guide"
+      ],
+      "evidence": [
+        {
+          "source": "nist-confabulation",
+          "supports": "False information presented as factual differs from fiction that was requested as fiction."
+        },
+        {
+          "source": "nist-verification",
+          "supports": "Check consequential factual claims against an appropriate source; confident wording is not evidence."
+        }
+      ],
+      "reviewed": "2026-09-29"
+    },
+    {
+      "id": "bias",
+      "name": "Bias",
+      "definition": "A systematic tendency that can unfairly favor people, groups, or viewpoints.",
+      "example": "A story generator repeatedly gives leadership roles to only one gender.",
+      "source": "nist-bias",
+      "learnMore": [
+        "google-embedding-space",
+        "word-embedding-bias-paper",
+        "banaji-ai-bias-video"
+      ],
+      "evidence": [
+        {
+          "source": "nist-bias",
+          "supports": "Repeated stereotypes can be a sign of harmful bias. The illustrated stories do not establish bias in a real model."
+        },
+        {
+          "source": "word-embedding-bias-paper",
+          "supports": "This study found gender stereotypes in static word embeddings. It did not test today’s chatbots."
+        }
+      ],
+      "reviewed": "2026-09-29"
+    },
+    {
+      "id": "grounding",
+      "name": "Grounding",
+      "definition": "Connecting an AI response to information sources used to produce it.",
+      "example": "An answer about a museum uses its published visitor guide.",
+      "source": "google-grounding",
+      "learnMore": [
+        "openai-truth-guide"
+      ],
+      "evidence": [
+        {
+          "source": "google-grounding",
+          "supports": "Grounding connects a response to source information."
+        },
+        {
+          "source": "summary-factuality",
+          "supports": "A generated summary can contain information unsupported by its source. Check the source and the summary."
+        }
+      ],
+      "reviewed": "2026-09-29"
+    },
+    {
+      "id": "automation",
+      "name": "Automation",
+      "definition": "Software carrying out defined steps automatically. Some automation uses AI.",
+      "example": "A timer turns your lights on at sunset without needing AI.",
+      "source": "google-automation",
+      "learnMore": [
+        "anthropic-fluency-framework"
+      ],
+      "evidence": [
+        {
+          "source": "google-automation",
+          "supports": "Software can perform defined steps automatically without AI; some automated processes also use AI."
+        }
+      ],
+      "reviewed": "2026-09-29"
+    },
+    {
+      "id": "augmentation",
+      "name": "Augmentation",
+      "definition": "Working with AI through back-and-forth collaboration, while contributing your own ideas and judgment.",
+      "example": "You and an AI revise a holiday itinerary together.",
+      "source": "anthropic",
+      "learnMore": [
+        "anthropic-fluency-framework"
+      ],
+      "evidence": [
+        {
+          "source": "anthropic",
+          "supports": "This lesson uses the AI Fluency framework’s meaning: collaborating with AI while contributing human judgment."
+        }
+      ],
+      "reviewed": "2026-09-29"
+    },
+    {
+      "id": "agent",
+      "name": "AI agent",
+      "definition": "An AI application that chooses steps and uses tools to work toward a goal.",
+      "example": "An agent checks permitted travel tools to compare train routes.",
+      "source": "anthropic-effective-agents",
+      "learnMore": [
+        "anthropic-fluency-framework",
+        "anthropic-effective-agents"
+      ],
+      "evidence": [
+        {
+          "source": "anthropic-effective-agents",
+          "supports": "Agents choose steps and use tools to pursue goals."
+        },
+        {
+          "source": "claude-permissions",
+          "supports": "Tool restrictions and approval requirements must be configured and enforced by the application."
+        }
+      ],
+      "reviewed": "2026-09-29"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "basics",
+      "title": "Meet AI",
+      "subtitle": "Learn what AI does and what powers it.",
+      "symbol": "✦",
+      "terms": [
+        "ai",
+        "genai",
+        "model"
+      ],
+      "questions": [
+        {
+          "id": "basics-1",
+          "term": "ai",
+          "prompt": "Which feature is using AI to recognize patterns?",
+          "scenario": "You are organizing pictures on your phone.",
+          "options": [
+            "Sort filenames from A to Z",
+            "Recognize which pictures contain dogs",
+            "Move every selected picture into a folder"
+          ],
+          "answer": 1,
+          "explanation": "This feature uses image content to predict whether a photo contains a dog. Alphabetizing filenames and moving selected files do not require interpreting the image."
+        },
+        {
+          "id": "basics-2",
+          "term": "genai",
+          "prompt": "Which request calls for generative AI?",
+          "options": [
+            "Create a picture of a library on the moon",
+            "Open a saved photo of a library",
+            "Sort library photos by date"
+          ],
+          "answer": 0,
+          "explanation": "Creating the imagined picture produces new content. That is a generative task."
+        },
+        {
+          "id": "basics-3",
+          "term": "model",
+          "prompt": "What are you changing?",
+          "scenario": "A chat app lets you choose a different model without leaving the app.",
+          "options": [
+            "The account that stores your chats",
+            "The website's visual theme",
+            "The system that processes your request"
+          ],
+          "answer": 2,
+          "explanation": "A model powers the response. One application can provide access to several models."
+        },
+        {
+          "id": "basics-4",
+          "term": "genai",
+          "prompt": "What makes this a generative AI task?",
+          "scenario": "You ask an AI to write a four-line poem about your sleepy cat.",
+          "options": [
+            "It finds a poem that must already exist",
+            "It produces text from learned patterns and your request",
+            "It verifies every detail about your cat"
+          ],
+          "answer": 1,
+          "explanation": "Generative AI produces content. The result is not necessarily a retrieved or verified document."
+        },
+        {
+          "id": "basics-5",
+          "term": "ai",
+          "prompt": "Can this still be AI?",
+          "scenario": "A music service learns listening patterns and recommends existing songs. It never writes songs.",
+          "options": [
+            "No, AI must create something new",
+            "Only if it has a chat window",
+            "Yes, AI can recommend without generating content"
+          ],
+          "answer": 2,
+          "explanation": "AI includes pattern recognition and prediction. Content generation is one use of AI."
+        }
+      ]
+    },
+    {
+      "id": "prompts",
+      "title": "Ask clearly",
+      "subtitle": "Learn how instructions and context shape a response.",
+      "symbol": "↗",
+      "terms": [
+        "prompt",
+        "context",
+        "output"
+      ],
+      "questions": [
+        {
+          "id": "prompts-1",
+          "term": "prompt",
+          "prompt": "Which part is the prompt?",
+          "scenario": "You use an AI to help plan a quiet afternoon.",
+          "options": [
+            "Your message: “Suggest three activities at home”",
+            "The AI's three activity suggestions",
+            "The app's button for starting a new chat"
+          ],
+          "answer": 0,
+          "explanation": "Your request is the prompt. The suggestions the system returns are its output."
+        },
+        {
+          "id": "prompts-2",
+          "term": "context",
+          "prompt": "Which addition gives the most useful context?",
+          "scenario": "Your prompt says: “Suggest something to cook tonight.” You have twenty minutes and eat vegetarian food.",
+          "options": [
+            "“Make the answer impressive”",
+            "“You are the world's greatest chef”",
+            "“Vegetarian, with twenty minutes to cook”"
+          ],
+          "answer": 2,
+          "explanation": "Relevant constraints can help the model tailor its answer to your situation."
+        },
+        {
+          "id": "prompts-3",
+          "term": "output",
+          "prompt": "Which item is the output?",
+          "scenario": "You paste rough birthday-speech notes and ask the AI to turn them into a draft.",
+          "options": [
+            "The rough notes you pasted",
+            "The speech draft the AI returns",
+            "Your instruction to write a draft"
+          ],
+          "answer": 1,
+          "explanation": "Output is the returned result. Your notes and instructions are inputs."
+        },
+        {
+          "id": "prompts-4",
+          "term": "context",
+          "prompt": "What have you done?",
+          "scenario": "You paste your packing list into a chat and ask what might be missing.",
+          "options": [
+            "Provided context for this request",
+            "Permanently retrained the model on your belongings",
+            "Guaranteed it will remember the list in every future chat"
+          ],
+          "answer": 0,
+          "explanation": "You supplied context for this request. Using that context does not itself update the model’s learned parameters. Provider policies about storing or later training on chats are a separate issue."
+        },
+        {
+          "id": "prompts-5",
+          "term": "prompt",
+          "prompt": "Which prompt best communicates the result you want?",
+          "scenario": "You want a short, friendly invitation for a Saturday picnic.",
+          "options": [
+            "“Write something amazing about Saturday”",
+            "“Make my plans sound better”",
+            "“Draft a friendly picnic invitation for Saturday in two sentences”"
+          ],
+          "answer": 2,
+          "explanation": "A clear task, tone, and length give the model concrete direction."
+        }
+      ]
+    },
+    {
+      "id": "models",
+      "title": "Behind the chat",
+      "subtitle": "Explore language models, tokens, and context limits.",
+      "symbol": "◈",
+      "terms": [
+        "llm",
+        "token",
+        "context-window"
+      ],
+      "questions": [
+        {
+          "id": "models-1",
+          "term": "token",
+          "prompt": "Which statement about tokens is accurate?",
+          "options": [
+            "Every token is one complete word",
+            "A token can be a word or part of a word",
+            "A token is always a full sentence"
+          ],
+          "answer": 1,
+          "explanation": "Models process tokens. The boundaries do not always match whole words."
+        },
+        {
+          "id": "models-2",
+          "term": "llm",
+          "prompt": "What is the LLM doing?",
+          "scenario": "An AI rewrites your long message into a shorter, friendlier version.",
+          "options": [
+            "Generating text using learned language patterns and your request",
+            "Finding the one official version of your message online",
+            "Asking a human editor to type the response"
+          ],
+          "answer": 0,
+          "explanation": "An LLM generates language using its training and the information available for your request."
+        },
+        {
+          "id": "models-3",
+          "term": "context-window",
+          "prompt": "What can use the model's context window?",
+          "scenario": "You attach a long travel guide to an ongoing chat.",
+          "options": [
+            "Only the final question you type",
+            "Every file stored anywhere on your device",
+            "Supplied instructions and material, available chat history, and the generated response"
+          ],
+          "answer": 2,
+          "explanation": "The context window includes input and generated output. The app may select or summarize what it sends to the model; a file is not available merely because it is on your device."
+        },
+        {
+          "id": "models-4",
+          "term": "context-window",
+          "prompt": "What does a larger context window allow?",
+          "options": [
+            "Considering more information at once",
+            "Remembering every past conversation forever",
+            "Guaranteeing that no detail is overlooked"
+          ],
+          "answer": 0,
+          "explanation": "More capacity allows more information. It does not guarantee permanent memory or perfect recall."
+        },
+        {
+          "id": "models-5",
+          "term": "token",
+          "prompt": "Can you assume this uses exactly 100 tokens?",
+          "scenario": "You have written a prompt containing 100 words.",
+          "options": [
+            "Yes, because tokens and words have identical boundaries",
+            "No, some words may split into multiple tokens",
+            "Yes, unless you add an attachment"
+          ],
+          "answer": 1,
+          "explanation": "A word count is not an exact token count. Tokenization depends on the model."
+        }
+      ]
+    },
+    {
+      "id": "judgment",
+      "title": "Check the answer",
+      "subtitle": "Spot unreliable claims and use sources thoughtfully.",
+      "symbol": "◎",
+      "terms": [
+        "hallucination",
+        "bias",
+        "grounding"
+      ],
+      "questions": [
+        {
+          "id": "judgment-1",
+          "term": "hallucination",
+          "prompt": "Which term describes this error?",
+          "scenario": "Asked for a quotation from a real book, an AI supplies a convincing quotation and title. You check: both were invented.",
+          "options": [
+            "Context",
+            "Grounding",
+            "Hallucination"
+          ],
+          "answer": 2,
+          "explanation": "The AI presented a fabricated claim as factual. Plausible wording does not establish truth."
+        },
+        {
+          "id": "judgment-2",
+          "term": "bias",
+          "prompt": "What pattern should you question?",
+          "scenario": "Using similar prompts that do not specify gender, a fictional story generator repeatedly assigns leadership roles to one gender and supporting roles to others.",
+          "options": [
+            "The stories use too many tokens",
+            "The repeated assignment of roles may reflect bias",
+            "The model needs a more colorful interface"
+          ],
+          "answer": 1,
+          "explanation": "Repeated stereotypes can signal bias in how groups are represented. A careful evaluation would need to examine the prompts and a wider sample of outputs."
+        },
+        {
+          "id": "judgment-3",
+          "term": "grounding",
+          "prompt": "Which approach grounds the answer?",
+          "scenario": "You want an explanation of a museum's current visitor rules.",
+          "options": [
+            "Have the AI use the museum's published visitor guide",
+            "Tell the AI to sound certain",
+            "Ask for a longer explanation without supplying sources"
+          ],
+          "answer": 0,
+          "explanation": "Grounding connects the answer to a checkable source relevant to the question."
+        },
+        {
+          "id": "judgment-4",
+          "term": "hallucination",
+          "prompt": "What is the strongest next step?",
+          "scenario": "An AI confidently gives a festival's opening time, but provides no source. You plan to travel there.",
+          "options": [
+            "Treat its confident tone as proof",
+            "Ask it to repeat the time more clearly",
+            "Check the organizer's current schedule"
+          ],
+          "answer": 2,
+          "explanation": "The claim could be wrong. Verify a detail you will rely on with a suitable source."
+        },
+        {
+          "id": "judgment-5",
+          "term": "grounding",
+          "prompt": "Does grounding guarantee this answer is correct?",
+          "scenario": "An AI summarizes a source you supplied and includes a link to it.",
+          "options": [
+            "No, it can still misread or misrepresent the source",
+            "Yes, any source link proves the whole answer",
+            "Yes, if the answer is detailed enough"
+          ],
+          "answer": 0,
+          "explanation": "The model can misread or misrepresent a source, and the source itself may be wrong or outdated. Check both the source and whether it supports the answer."
+        }
+      ]
+    },
+    {
+      "id": "control",
+      "title": "Stay in control",
+      "subtitle": "Choose how to work with AI and its tools.",
+      "symbol": "⌘",
+      "terms": [
+        "automation",
+        "augmentation",
+        "agent"
+      ],
+      "questions": [
+        {
+          "id": "control-1",
+          "term": "automation",
+          "prompt": "Does this automation need AI?",
+          "scenario": "A timer switches your lamp on every evening at 7 p.m.",
+          "options": [
+            "Yes, any automatic action requires an AI model",
+            "No, a fixed rule can perform this task",
+            "Yes, because the action happens without a click"
+          ],
+          "answer": 1,
+          "explanation": "Automation can follow fixed rules. AI is useful for some automated tasks, but not required."
+        },
+        {
+          "id": "control-2",
+          "term": "augmentation",
+          "prompt": "Which term best fits this collaboration?",
+          "scenario": "An AI suggests holiday ideas. You reject some, add preferences, and refine the plan together.",
+          "options": [
+            "Grounding",
+            "Tokenization",
+            "Augmentation"
+          ],
+          "answer": 2,
+          "explanation": "In the AI Fluency framework, this is augmentation: AI supports the process while you contribute ideas and make judgments."
+        },
+        {
+          "id": "control-3",
+          "term": "agent",
+          "prompt": "What makes this an agent workflow?",
+          "scenario": "You authorize an AI to compare train routes. It checks available travel tools and adjusts its search to your constraints.",
+          "options": [
+            "It uses tools and takes steps toward your goal",
+            "It calls itself a travel expert",
+            "It writes its answer in a friendly tone"
+          ],
+          "answer": 0,
+          "explanation": "An agent uses available tools to pursue a goal. A persona alone does not provide those capabilities."
+        },
+        {
+          "id": "control-4",
+          "term": "agent",
+          "prompt": "What should happen before it sends the invitations?",
+          "scenario": "An agent has helped plan a picnic. Its messaging tool is available, but you have not authorized sending anything.",
+          "options": [
+            "It should send them because the tool is available",
+            "It should get your permission to send them",
+            "It should choose recipients from old conversations"
+          ],
+          "answer": 1,
+          "explanation": "In this scenario, the app should require approval before sending invitations. Tool access and approval settings determine which actions can run."
+        },
+        {
+          "id": "control-5",
+          "term": "automation",
+          "prompt": "Which configured step uses AI automation?",
+          "scenario": "You set up a packing-list helper that runs whenever you save a list.",
+          "options": [
+            "Automatically have AI group each saved list into categories",
+            "Discuss possible holidays and revise your preferences together",
+            "Choose the destination yourself without using software"
+          ],
+          "answer": 0,
+          "explanation": "A trigger starts a defined task; AI performs the categorization. Automatic steps do not have to use AI."
+        }
+      ]
+    }
+  ]
+}

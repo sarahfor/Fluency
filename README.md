@@ -1,23 +1,23 @@
-# How the Algorithm Sees You
+# Fluent: Learn AI one game at a time
 
-An interactive HCI music-recommendation prototype by Ctrl Alt Elite. Built with plain HTML, CSS, and JavaScript.
+A public, web-first AI learning prototype for anyone. Play two brand-matching challenges, learn 15 core terms across five lessons, and explore **The Word Map**: a pair of hands-on experiments about word relationships and next-word prediction.
 
-Participants can try three preference input formats, review three anonymous sets of ten songs, rate fit and familiarity, select a preferred set, and download their session as JSON.
+**Live site:** https://sarahfor.github.io/Fluency/
 
-## Sample mode
+The Word Map uses a tiny authored text collection to build context-count vectors, compare word pairs, and show how changing one sentence changes the result. A second activity lets you guess a continuation and inspect counts from two different prompts. Its word-level examples are teaching aids; they do not run word2vec, a tokenizer, or a language model. The historical stereotype example comes from [Bolukbasi et al. (2016)](https://arxiv.org/pdf/1607.06520). The tokenizer splits text into pieces; the language model predicts a continuation.
 
-All song sets are fixed examples. No LLM calls, screenshot extraction, playlist integration, or study-data backend is connected. Inputs and ratings stay in browser-tab memory and clear on reload. Sample ratings are marked as simulated in exported sessions.
+Sources are linked beside the learning activities. Scores and XP record practice, not validated fluency. Progress is saved in your browser. There is no account, backend, or cross-device sync.
 
 ## Run locally
 
-From this directory, run:
+From the repository root:
 
 ```sh
-python3 -m http.server 8000
+python3 -m http.server 4176
 ```
 
-Then open http://localhost:8000.
+Then open http://127.0.0.1:4176/.
 
-## Hosting
+## Code and research
 
-GitHub Pages serves the repository root on the `main` branch. Changes to `index.html`, `style.css`, or `app.js` are published after pushing to `main`.
+This repository contains the static browser app used by GitHub Pages. The lesson and game content lives in `content.json`, `activities.json`, and `embedding-game-data.js`; the client-side logic is in the JavaScript modules. [Google's embedding-space guide](https://developers.google.com/machine-learning/crash-course/embeddings/embedding-space), [Google's language-model guide](https://developers.google.com/machine-learning/crash-course/llm), and the [2016 word-embeddings paper](https://arxiv.org/pdf/1607.06520) support the concepts in The Word Map. The toy data and its limits are described in the game itself.

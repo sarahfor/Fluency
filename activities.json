@@ -1,0 +1,558 @@
+{
+  "version": 1,
+  "verified": "2026-09-26",
+  "activities": [
+    {
+      "id": "company-match",
+      "kind": "match",
+      "title": "Know the logo",
+      "subtitle": "Match ChatGPT, Gemini, Claude, Grok, Microsoft Copilot, Meta AI, and Perplexity to their companies.",
+      "leftLabel": "Company",
+      "rightLabel": "App",
+      "label": "The logo challenge",
+      "pairs": [
+        {
+          "id": "openai",
+          "left": {
+            "label": "OpenAI",
+            "asset": "assets/brands/openai-wordmark.png",
+            "wordmark": true
+          },
+          "right": {
+            "label": "ChatGPT",
+            "asset": "assets/brands/chatgpt-icon.png",
+            "wordmark": false,
+            "teaserAsset": "assets/brands/chatgpt-icon.png"
+          },
+          "explanation": "OpenAI provides ChatGPT, the app. GPT is a family of models developed by OpenAI.",
+          "sources": [
+            "https://chatgpt.com/overview/",
+            "https://developers.openai.com/api/docs/models/all"
+          ]
+        },
+        {
+          "id": "google",
+          "left": {
+            "label": "Google",
+            "asset": "assets/brands/google-wordmark-display.png",
+            "wordmark": true
+          },
+          "right": {
+            "label": "Gemini",
+            "asset": "assets/brands/gemini-icon.png",
+            "wordmark": false,
+            "teaserAsset": "assets/brands/gemini-icon.png"
+          },
+          "explanation": "Google provides the Gemini app. Google DeepMind develops the Gemini model family.",
+          "sources": [
+            "https://support.google.com/gemini/answer/13275745?hl=en",
+            "https://deepmind.google/models/gemini/"
+          ]
+        },
+        {
+          "id": "anthropic",
+          "left": {
+            "label": "Anthropic",
+            "asset": "assets/brands/anthropic-wordmark.svg",
+            "wordmark": true
+          },
+          "right": {
+            "label": "Claude",
+            "asset": "assets/brands/claude-app-icon.jpg",
+            "wordmark": false,
+            "teaserAsset": "assets/brands/claude-icon.png"
+          },
+          "explanation": "Anthropic provides the Claude app and develops Claude models. The app and model family share a name.",
+          "sources": [
+            "https://claude.com/product/overview",
+            "https://platform.claude.com/docs/en/models/overview"
+          ]
+        },
+        {
+          "id": "xai",
+          "left": {
+            "label": "xAI / SpaceXAI",
+            "asset": "assets/brands/spacexai-wordmark.svg",
+            "wordmark": true,
+            "showLabel": true
+          },
+          "right": {
+            "label": "Grok",
+            "asset": "assets/brands/grok-icon.svg",
+            "wordmark": false
+          },
+          "explanation": "xAI developed Grok. SpaceX acquired xAI in February 2026, and the current company site uses the SpaceXAI name. Grok is both an app name and a model-family name.",
+          "sources": [
+            "https://x.ai/news/xai-joins-spacex",
+            "https://x.ai/legal/privacy-policy"
+          ],
+          "awardKey": "activity-company-match-more-xai"
+        },
+        {
+          "id": "microsoft",
+          "left": {
+            "label": "Microsoft",
+            "asset": "assets/brands/microsoft-wordmark.png",
+            "wordmark": true
+          },
+          "right": {
+            "label": "Microsoft Copilot",
+            "asset": "assets/brands/copilot-icon.svg",
+            "wordmark": false
+          },
+          "explanation": "Microsoft provides Microsoft Copilot, the everyday AI assistant. This card refers to Microsoft Copilot, not the separate GitHub Copilot coding product. An app name does not identify a single model underneath it.",
+          "sources": [
+            "https://explore.microsoft.com/en-us/microsoft-copilot/learn"
+          ],
+          "awardKey": "activity-company-match-more-microsoft"
+        },
+        {
+          "id": "meta",
+          "left": {
+            "label": "Meta",
+            "asset": "assets/brands/meta-wordmark.svg",
+            "wordmark": true
+          },
+          "right": {
+            "label": "Meta AI",
+            "asset": "assets/brands/meta-ai-icon.jpg",
+            "wordmark": false
+          },
+          "explanation": "Meta provides Meta AI, its AI assistant and app. Meta also develops Llama, a model family. Meta AI and Llama describe different things.",
+          "sources": [
+            "https://about.fb.com/news/2025/04/introducing-meta-ai-app-new-way-access-ai-assistant/",
+            "https://ai.meta.com/blog/large-language-model-llama-meta-ai/"
+          ],
+          "awardKey": "activity-company-match-more-meta"
+        },
+        {
+          "id": "perplexity",
+          "left": {
+            "label": "Perplexity AI"
+          },
+          "right": {
+            "label": "Perplexity",
+            "asset": "assets/brands/perplexity-icon.svg",
+            "wordmark": false
+          },
+          "explanation": "Perplexity AI provides Perplexity, an AI-powered answer engine. The product can use models from different developers; the app provider and model developer are different roles.",
+          "sources": [
+            "https://www.perplexity.ai/hub",
+            "https://www.perplexity.ai/en-GB/hub/legal/terms-of-service"
+          ],
+          "awardKey": "activity-company-match-more-perplexity"
+        }
+      ]
+    },
+    {
+      "id": "model-challenge",
+      "kind": "match",
+      "matchMode": "many-to-one",
+      "timed": true,
+      "roundSize": 6,
+      "verified": "2026-09-27",
+      "title": "Know the model",
+      "subtitle": "Astra, Luna, Sol, Opus, Llama, Grok, and more. Match 11 model names and families to five developers.",
+      "leftLabel": "Model",
+      "rightLabel": "Developer",
+      "label": "Advanced · The model challenge",
+      "groups": [
+        {
+          "id": "openai",
+          "label": "OpenAI"
+        },
+        {
+          "id": "anthropic",
+          "label": "Anthropic"
+        },
+        {
+          "id": "google",
+          "label": "Google DeepMind"
+        },
+        {
+          "id": "meta",
+          "label": "Meta"
+        },
+        {
+          "id": "xai",
+          "label": "xAI / SpaceXAI"
+        }
+      ],
+      "pairs": [
+        {
+          "id": "astra",
+          "left": {
+            "label": "Astra"
+          },
+          "right": {
+            "groupId": "openai",
+            "label": "OpenAI"
+          },
+          "explanation": "GPT-6 Astra is an OpenAI model. It is distinct from Google DeepMind’s Project Astra, which is an AI assistant research project.",
+          "sources": [
+            "https://developers.openai.com/api/docs/models/gpt-6-astra",
+            "https://deepmind.google/models/project-astra/"
+          ],
+          "developerVerified": "2026-09-30"
+        },
+        {
+          "id": "sol",
+          "left": {
+            "label": "Sol"
+          },
+          "right": {
+            "groupId": "openai",
+            "label": "OpenAI"
+          },
+          "explanation": "GPT-6 Sol is an OpenAI model in the GPT-6 family.",
+          "sources": [
+            "https://developers.openai.com/api/docs/models/gpt-6-sol"
+          ]
+        },
+        {
+          "id": "luna",
+          "left": {
+            "label": "Luna"
+          },
+          "right": {
+            "groupId": "openai",
+            "label": "OpenAI"
+          },
+          "explanation": "GPT-6 Luna is an OpenAI model in the GPT-6 family.",
+          "sources": [
+            "https://developers.openai.com/api/docs/models/gpt-6-luna"
+          ],
+          "developerVerified": "2026-09-30"
+        },
+        {
+          "id": "fable",
+          "left": {
+            "label": "Fable"
+          },
+          "right": {
+            "groupId": "anthropic",
+            "label": "Anthropic"
+          },
+          "explanation": "Here, Fable means Anthropic’s Claude model. OpenAI also uses “fable” as a text-to-speech voice name; that voice is not a model.",
+          "sources": [
+            "https://www.anthropic.com/claude/fable",
+            "https://developers.openai.com/api/docs/guides/text-to-speech"
+          ],
+          "developerVerified": "2026-09-30"
+        },
+        {
+          "id": "opus",
+          "left": {
+            "label": "Opus"
+          },
+          "right": {
+            "groupId": "anthropic",
+            "label": "Anthropic"
+          },
+          "explanation": "Opus is a model line in Anthropic’s Claude family.",
+          "sources": [
+            "https://www.anthropic.com/claude/opus"
+          ]
+        },
+        {
+          "id": "sonnet",
+          "left": {
+            "label": "Sonnet"
+          },
+          "right": {
+            "groupId": "anthropic",
+            "label": "Anthropic"
+          },
+          "explanation": "Sonnet is a model line in Anthropic’s Claude family.",
+          "sources": [
+            "https://www.anthropic.com/claude/sonnet"
+          ]
+        },
+        {
+          "id": "haiku",
+          "left": {
+            "label": "Haiku"
+          },
+          "right": {
+            "groupId": "anthropic",
+            "label": "Anthropic"
+          },
+          "explanation": "Haiku is a lightweight model line in Anthropic’s Claude family.",
+          "sources": [
+            "https://www.anthropic.com/claude/haiku"
+          ]
+        },
+        {
+          "id": "gemma",
+          "left": {
+            "label": "Gemma"
+          },
+          "right": {
+            "groupId": "google",
+            "label": "Google DeepMind"
+          },
+          "explanation": "Gemma is Google DeepMind’s family of open models, built from research also used for Gemini.",
+          "sources": [
+            "https://ai.google.dev/gemma/docs"
+          ]
+        },
+        {
+          "id": "gemini-flash",
+          "left": {
+            "label": "Gemini Flash"
+          },
+          "right": {
+            "groupId": "google",
+            "label": "Google DeepMind"
+          },
+          "explanation": "Flash is a model name within Google DeepMind’s Gemini family. The full name matters: other developers also use the word Flash.",
+          "sources": [
+            "https://deepmind.google/models/gemini/"
+          ]
+        },
+        {
+          "id": "llama",
+          "left": {
+            "label": "Llama"
+          },
+          "right": {
+            "groupId": "meta",
+            "label": "Meta"
+          },
+          "explanation": "Llama is Meta’s family of AI models. Meta AI is the name of its assistant app.",
+          "sources": [
+            "https://ai.meta.com/llama/faq/",
+            "https://about.fb.com/news/2025/04/introducing-meta-ai-app-new-way-access-ai-assistant/"
+          ]
+        },
+        {
+          "id": "grok",
+          "left": {
+            "label": "Grok"
+          },
+          "right": {
+            "groupId": "xai",
+            "label": "xAI / SpaceXAI"
+          },
+          "explanation": "Grok is the model family developed by xAI, listed in the SpaceXAI developer documentation. Grok is also the name of its assistant app.",
+          "sources": [
+            "https://docs.x.ai/developers/models",
+            "https://x.ai/news/grok-2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "model-match",
+      "kind": "match",
+      "title": "Meet the model makers",
+      "subtitle": "Connect five model families to their developers.",
+      "leftLabel": "Developer",
+      "rightLabel": "Model family",
+      "label": "Foundation labs",
+      "pairs": [
+        {
+          "id": "openai",
+          "left": {
+            "label": "OpenAI"
+          },
+          "right": {
+            "label": "GPT"
+          },
+          "explanation": "OpenAI develops GPT models. ChatGPT is the app name.",
+          "sources": [
+            "https://developers.openai.com/api/docs/models/all"
+          ]
+        },
+        {
+          "id": "anthropic",
+          "left": {
+            "label": "Anthropic"
+          },
+          "right": {
+            "label": "Claude models"
+          },
+          "explanation": "Anthropic develops the Claude model family. Claude is also the name of its app.",
+          "sources": [
+            "https://platform.claude.com/docs/en/models/overview"
+          ]
+        },
+        {
+          "id": "google",
+          "left": {
+            "label": "Google DeepMind"
+          },
+          "right": {
+            "label": "Gemini models"
+          },
+          "explanation": "Google DeepMind develops Gemini models. Google also offers Gemini apps.",
+          "sources": [
+            "https://deepmind.google/models/gemini/"
+          ]
+        },
+        {
+          "id": "meta",
+          "left": {
+            "label": "Meta",
+            "asset": "assets/brands/meta-wordmark.svg",
+            "wordmark": true
+          },
+          "right": {
+            "label": "Llama"
+          },
+          "explanation": "Meta develops Llama models. Llama is a model-family name.",
+          "sources": [
+            "https://ai.meta.com/blog/large-language-model-llama-meta-ai/"
+          ]
+        },
+        {
+          "id": "mistral",
+          "left": {
+            "label": "Mistral AI"
+          },
+          "right": {
+            "label": "Mistral models"
+          },
+          "explanation": "Mistral AI develops models including Mistral Small, Medium, and Large. This is a starter map, not an exhaustive catalog.",
+          "sources": [
+            "https://docs.mistral.ai/models"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "name-sort",
+      "kind": "quiz",
+      "title": "Company, model, or app?",
+      "subtitle": "Find out what each name actually refers to.",
+      "label": "Know the difference",
+      "questions": [
+        {
+          "id": "sort-openai",
+          "prompt": "What is OpenAI?",
+          "options": [
+            "Organization",
+            "Model family",
+            "App / service",
+            "Both a model family and an app"
+          ],
+          "answer": 0,
+          "explanation": "OpenAI is the organization. It develops models and provides products such as ChatGPT.",
+          "sources": [
+            "https://developers.openai.com/api/docs/models/all",
+            "https://chatgpt.com/overview/"
+          ]
+        },
+        {
+          "id": "sort-chatgpt",
+          "prompt": "What does the name ChatGPT refer to?",
+          "options": [
+            "Organization",
+            "Model family",
+            "App / service",
+            "Both a model family and an app"
+          ],
+          "answer": 2,
+          "explanation": "ChatGPT is an app/service from OpenAI. A product can use multiple models and tools.",
+          "sources": [
+            "https://chatgpt.com/overview/"
+          ]
+        },
+        {
+          "id": "sort-gpt",
+          "prompt": "What does “GPT model family” refer to?",
+          "options": [
+            "Organization",
+            "Model family",
+            "App / service",
+            "Both a model family and an app"
+          ],
+          "answer": 1,
+          "explanation": "GPT names identify models developed by OpenAI.",
+          "sources": [
+            "https://developers.openai.com/api/docs/models/all"
+          ]
+        },
+        {
+          "id": "sort-claude",
+          "prompt": "Without more context, what can “Claude” refer to?",
+          "options": [
+            "Organization",
+            "Model family",
+            "App / service",
+            "Both a model family and an app"
+          ],
+          "answer": 3,
+          "explanation": "Claude names both Anthropic’s model family and its app. Look at the context to tell which is meant.",
+          "sources": [
+            "https://platform.claude.com/docs/en/models/overview",
+            "https://claude.com/product/overview"
+          ]
+        },
+        {
+          "id": "sort-gemini",
+          "prompt": "Without more context, what can “Gemini” refer to?",
+          "options": [
+            "Organization",
+            "Model family",
+            "App / service",
+            "Both a model family and an app"
+          ],
+          "answer": 3,
+          "explanation": "Gemini names both Google DeepMind’s model family and Google’s app.",
+          "sources": [
+            "https://deepmind.google/models/gemini/",
+            "https://support.google.com/gemini/answer/13275745?hl=en"
+          ]
+        },
+        {
+          "id": "sort-llama",
+          "prompt": "What does “Llama” identify here?",
+          "options": [
+            "Organization",
+            "Model family",
+            "App / service",
+            "Both a model family and an app"
+          ],
+          "answer": 1,
+          "explanation": "Llama is Meta’s model family. Meta is the organization.",
+          "sources": [
+            "https://ai.meta.com/blog/large-language-model-llama-meta-ai/"
+          ]
+        }
+      ]
+    }
+  ],
+  "ideas": [
+    {
+      "title": "Logo detective",
+      "description": "Recognize an app from its symbol, then name the company behind it. Practice the same connections using names, too.",
+      "skill": "Visual recognition + attribution"
+    },
+    {
+      "title": "Decode a headline",
+      "description": "“A travel app adds a Claude-powered helper.” Identify the model developer and what the headline leaves unknown.",
+      "skill": "Apply knowledge in a new context"
+    },
+    {
+      "title": "Read the label",
+      "description": "Compare the publisher and “powered by” fields in a fictional app listing. Explain what each tells you.",
+      "skill": "App provider vs. model developer"
+    },
+    {
+      "title": "Build the connection",
+      "description": "Connect developer → model → app. Then discover why some apps connect to more than one model developer.",
+      "skill": "Understand relationships"
+    },
+    {
+      "title": "Same brand, different job",
+      "description": "Use a short sentence to decide whether “Gemini” or “Claude” means the app or the model.",
+      "skill": "Read names in context"
+    },
+    {
+      "title": "What would you check?",
+      "description": "An unfamiliar app uses a familiar-looking logo. Choose what to verify before downloading it.",
+      "skill": "Familiarity vs. authenticity"
+    }
+  ]
+}
