@@ -1,8 +1,8 @@
 import {renderLearningVisual,bindLearningVisual} from './learn-visuals.js?v=20260929-evidence';
-import {loadActivities,activityTeaser,activitiesPage,bindActivities,openActivity} from './activities.js?v=20260930-research';
+import {loadActivities,activityTeaser,activitiesPage,bindActivities,openActivity} from './activities.js?v=20261107-github-scope';
 import {startWordMapGame,wordMapTeaser} from './embedding-game.js?v=20261107c';
 import {freshState,dayKey,streak,makeSession,submitAnswer,nextQuestion,loadState,award} from './engine.js';
-const app=document.querySelector('#app'),dialog=document.querySelector('#lesson-dialog'),KEY='fluent.ai.progress';
+const app=document.querySelector('#app'),dialog=document.querySelector('#lesson-dialog'),KEY='fluent.github.fluency.progress';
 let content,state,view='learn',sessionKey=null,storageOK=true,query='';
 const icons={activities:'<rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/><path d="M14 6h4v4M10 18H6v-4"/>',learn:'<path d="m4 7 8-4 8 4-8 4zM4 12l8 4 8-4M4 17l8 4 8-4"/>',words:'<path d="M4 4h7a3 3 0 0 1 3 3v14a4 4 0 0 0-4-3H4zM14 7a3 3 0 0 1 3-3h3v14h-3a3 3 0 0 0-3 3"/>',practice:'<path d="M20 10a8 8 0 1 0-2 8M20 4v6h-6"/>',sources:'<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/>'};
 const icon=name=>`<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[name]}</svg>`;

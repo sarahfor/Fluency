@@ -2,7 +2,7 @@ import {makeActivitySession,checkMatch,checkQuiz,nextActivityQuestion,recordActi
 import {createActivityTimer,formatActivityTime} from './activity-timer.js';
 import {createLogoResultImage} from './activity-share.js';
 
-const KEY='fluent.ai.activities';
+const KEY='fluent.github.fluency.activities';
 const esc=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let data,progress,active=null,callbacks={},storageOK=true;
 let activityTimer=null,timerTick=null,resultImage=null,resultGeneration=0,modelRound=0;
