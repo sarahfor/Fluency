@@ -1,8 +1,8 @@
 # Fluent: Learn AI one game at a time
 
-A public, web-first AI learning prototype for anyone. Play two brand-matching challenges, try **Speak, then what?** to distinguish everyday voice tools, learn 15 core terms across five lessons, and explore **The Word Map**: a pair of hands-on experiments about word relationships and next-word prediction.
+A public, web-first AI learning prototype for anyone. **Unit 1, Try AI in everyday life**, has four short interactive moves: draft a message, ask a follow-up, summarize notes, and check an answer. **Unit 2, The language of AI**, retains the 15 core terms across five lessons. Players can also try the logo and model challenges, **Speak, then what?**, and **The Word Map**.
 
-Each lesson now begins with three quick scene challenges: choose an example, get immediate feedback, then reveal the concept and illustration. See [GAME_DESIGN.md](GAME_DESIGN.md) for the Duolingo product references, the mechanics used here, and the limits of this prototype.
+The everyday path gives an authored result before naming the concept. Its scenes do not call a live model or send a message. The terminology lessons begin with three quick scene challenges: choose an example, get immediate feedback, then reveal the concept and illustration. See [GAME_DESIGN.md](GAME_DESIGN.md) for the Duolingo product references, the mechanics used here, and the limits of this prototype.
 
 **Live site:** https://sarahfor.github.io/Fluency/
 

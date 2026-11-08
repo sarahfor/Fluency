@@ -1,4 +1,4 @@
-export const freshState=()=>({version:1,xp:0,days:{},awards:[],completed:[],missed:[],seen:[],sessions:{},practiceCount:0});
+export const freshState=()=>({version:1,xp:0,days:{},awards:[],completed:[],missed:[],seen:[],sessions:{},practiceCount:0,everydayCompleted:false});
 export function dayKey(date=new Date()){return `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`;}
 export function streak(days,now=new Date()){let cursor=new Date(now.getFullYear(),now.getMonth(),now.getDate(),12),count=0;if(!days[dayKey(cursor)])cursor.setDate(cursor.getDate()-1);while(days[dayKey(cursor)]){count++;cursor.setDate(cursor.getDate()-1);}return count;}
 export function makeSession(lesson,questionIds,review=false){return {lesson,review,stage:review?'question':'intro',intro:0,introChoice:null,queue:[...questionIds],original:[...questionIds],index:0,selected:null,checked:false,correct:false,attempted:[],firstCorrect:0,earned:0,finished:false};}
@@ -25,6 +25,7 @@ export function loadState(raw,content){
   const state=freshState();if(!raw)return state;let data;try{data=JSON.parse(raw);}catch{return state;}if(data?.version!==1)return state;
   const qs=new Set(content.lessons.flatMap(l=>l.questions.map(q=>q.id))),ls=new Set(content.lessons.map(l=>l.id)),ts=new Set(content.terms.map(t=>t.id));
   for(const key of ['xp','practiceCount'])if(Number.isSafeInteger(data[key])&&data[key]>=0)state[key]=data[key];
+  if(data.everydayCompleted===true)state.everydayCompleted=true;
   for(const [key,allowed] of [['completed',ls],['missed',qs],['seen',ts]])if(Array.isArray(data[key]))state[key]=[...new Set(data[key].filter(v=>allowed.has(v)))];
   if(Array.isArray(data.awards))state.awards=[...new Set(data.awards.filter(v=>typeof v==='string'&&v.length<150))];
   if(data.days&&typeof data.days==='object')for(const [key,value] of Object.entries(data.days))if(/^\d{4}-\d{2}-\d{2}$/.test(key)&&Number.isSafeInteger(value)&&value>0)state.days[key]=value;
