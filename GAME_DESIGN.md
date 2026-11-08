@@ -2,6 +2,8 @@
 
 Reviewed November 8, 2026. Fluent is an independent AI literacy prototype for the public. These are product-design references, not evidence that Fluent improves learning outcomes.
 
+For complete author–date citations and a clear distinction between research, product descriptions, and further reading, see [Research references](RESEARCH_REFERENCES.md).
+
 ## What Duolingo documents
 
 | Published mechanism | Duolingo's description | Fluent's current translation |
