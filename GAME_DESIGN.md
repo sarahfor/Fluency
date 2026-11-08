@@ -12,6 +12,10 @@ Reviewed November 7, 2026. Fluent is an independent AI literacy prototype for th
 | Review rather than only accumulation | Duolingo's [Time Spent Learning Well](https://blog.duolingo.com/time-spent-learning-well/) article explains why it weights progress through lessons and practice rather than raw XP alone. | Fluent has a missed-question practice queue. XP is explicitly participation feedback, not an AI fluency score or a learning-effectiveness claim. |
 | Varied exercise formats | Duolingo describes [matching, mistake review, and other practice types](https://blog.duolingo.com/ways-to-practice-in-duolingo/). | Fluent offers logo and model matching, word-vector and next-word experiments, scene choices, and application questions. |
 
+## Everyday voice game
+
+Reviewed November 8, 2026. **Speak, then what?** sits between the logo hook and the advanced model challenge. Players choose dictation, transcription, or voice conversation for three authored situations, then correct a simulated name error before a simulated send. It uses no microphone, records no audio, and sends no message. Each reveal links to the source for its concept: [Wispr Flow's dictation guide](https://docs.wisprflow.ai/articles/2772472373-what-is-flow), [OpenAI's transcription guide](https://developers.openai.com/api/docs/guides/transcription), and [Google's Gemini Live guide](https://support.google.com/gemini/answer/15274899). These product documents define the categories; they do not show that the game improves learning.
+
 ## Interaction rules
 
 1. Ask for one action before showing a new term's definition.
