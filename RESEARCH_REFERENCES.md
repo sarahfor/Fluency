@@ -17,8 +17,6 @@ Reviewed November 8, 2026. These references use author–date citations. The not
 
 ## Duolingo product descriptions
 
-These are first-party descriptions of Duolingo's product, not peer-reviewed tests of Fluent.
-
 - Duolingo. (n.d.). *What is the Duolingo teaching method?* [https://blog.duolingo.com/duolingo-teaching-method/](https://blog.duolingo.com/duolingo-teaching-method/) — Describes learning by doing, small steps, hints, and explanations.
 - Duolingo. (n.d.). *How to use Duolingo for language learning.* [https://blog.duolingo.com/duolingo-101-how-to-learn-a-language-on-duolingo/](https://blog.duolingo.com/duolingo-101-how-to-learn-a-language-on-duolingo/) — Describes lessons, XP, streaks, and other game features.
 - Duolingo. (n.d.). *Understanding Duolingo's Time Spent Learning Well metric.* [https://blog.duolingo.com/time-spent-learning-well/](https://blog.duolingo.com/time-spent-learning-well/) — Explains Duolingo's own practice-oriented product metric; Fluent does not use or claim this metric.
