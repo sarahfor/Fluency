@@ -23,6 +23,23 @@ export const EXPECTED_PAIRS = [
   ['rocket', 'spaceship']
 ];
 
+// Analogy outputs reported in Bolukbasi et al. (2016) for the historical
+// Google News word2vec embedding. Choices are authored for this activity.
+export const PAPER_ANALOGIES = [
+  {
+    prompt: 'king',
+    output: 'queen',
+    choices: ['queen', 'homemaker', 'doctor'],
+    explanation: 'The model followed a relationship between gendered titles.'
+  },
+  {
+    prompt: 'computer programmer',
+    output: 'homemaker',
+    choices: ['homemaker', 'computer programmer', 'doctor'],
+    explanation: 'The occupation changed with gender. The researchers used this output to show a stereotype in that embedding, not a difference in people’s abilities.'
+  }
+];
+
 export const NEXT_WORD_EXAMPLES = [
   {prefix: 'the cat sat on the', ending: 'mat', count: 3},
   {prefix: 'the cat sat on the', ending: 'rug', count: 2},

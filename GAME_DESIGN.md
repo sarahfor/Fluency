@@ -18,11 +18,19 @@ For complete author–date citations and a clear distinction between research, p
 
 Reviewed November 8, 2026. Four authored practice scenes come before the former first unit, now **Unit 2: The language of AI**. A player chooses the details needed for a message, asks a more specific follow-up, selects actions from notes, and corrects a wrong time against an original note. Each successful action first shows a useful authored result, then names the move and links its evidence. These are simulations: no live AI drafts a result, no external fact is checked, and nothing is sent. Closing mid-round restarts Unit 1; completion is remembered in this browser. The path awards 20 XP once per day for completion, a participation marker rather than a fluency score.
 
+### Bonus lab: Build a tiny app
+
+Added November 15, 2026. Players give a checklist app a purpose and first item, test its working preview, request a progress bar, and download a standalone HTML file. The build lab is available from the Unit 1 card and completion screen. It follows the prompt → build → test → revise sequence described in [GitHub's vibe coding tutorial](https://docs.github.com/en/copilot/tutorials/vibe-coding), but this guided implementation uses a fixed template and no live AI model. Its purpose is to let a beginner make and modify something functional, not to demonstrate AI code generation.
+
 The message and follow-up scenes use [OpenAI's prompting guide](https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt) for clear instructions, context, tone, and iterative refinement. [OpenAI's ChatGPT FAQ](https://help.openai.com/en/articles/12677804-what-is-chatgpt-faq) supports the follow-up and summarization capabilities illustrated. [OpenAI's truth guide](https://help.openai.com/en/articles/8313428-does-chatgpt-tell-the-truth) supports the advice to verify important claims against reliable sources. These sources support the concepts, not the invented scenes or a claim about learning outcomes.
 
 ## Everyday voice game
 
 Reviewed November 8, 2026. **Speak, then what?** follows the everyday path as an optional voice-tools game. Players choose dictation, transcription, or voice conversation for three authored situations, then correct a simulated name error before a simulated send. It uses no microphone, records no audio, and sends no message. Each reveal links to the source for its concept: [Wispr Flow's dictation guide](https://docs.wisprflow.ai/articles/2772472373-what-is-flow), [OpenAI's transcription guide](https://developers.openai.com/api/docs/guides/transcription), and [Google's Gemini Live guide](https://support.google.com/gemini/answer/15274899). These product documents define the categories; they do not show that the game improves learning.
+
+## Word Map analogy matching
+
+Reviewed November 15, 2026. After building authored toy context vectors, players complete two analogies and compare their choices with the historical static word2vec outputs reported by [Bolukbasi et al. (2016)](https://arxiv.org/pdf/1607.06520): man:king :: woman:queen, then man:computer programmer :: woman:homemaker. The second output is a gender stereotype identified by the authors. Players see whether they matched the published output, but the game does not mark that match as a good answer or infer anything about the player. The activity does not run word2vec or a modern language model.
 
 ## Interaction rules
 

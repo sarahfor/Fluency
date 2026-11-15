@@ -1,19 +1,19 @@
 import {
-  CONTEXT_WORDS, TARGET_WORDS, MINI_CORPUS, CHANGED_CORPUS, EXPECTED_PAIRS,
+  CONTEXT_WORDS, TARGET_WORDS, MINI_CORPUS, CHANGED_CORPUS, EXPECTED_PAIRS, PAPER_ANALOGIES,
   NEXT_WORD_EXAMPLES, NEXT_WORD_PROMPTS, NEXT_WORD_CHOICES,
   contextVector, cosineSimilarity, pairKey, continuationCounts
-} from './embedding-game-data.js?v=20261107-shift';
+} from './embedding-game-data.js?v=20261115-analogies';
 
 const dialog = document.querySelector('#embedding-dialog');
 const esc = value => String(value).replace(/[&<>"']/g, character => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[character]));
 const sources = {
   embeddings: {label:'Google · Embedding space and static embeddings',url:'https://developers.google.com/machine-learning/crash-course/embeddings/embedding-space'},
-  paper: {label:'Bolukbasi et al. · 2016 study',url:'https://arxiv.org/pdf/1607.06520'},
+  paper: {label:'Bolukbasi et al. · 2016 word2vec study',url:'https://arxiv.org/pdf/1607.06520'},
   tokens: {label:'Google · Tokens and language models',url:'https://developers.google.com/machine-learning/crash-course/llm'},
   tokenizer: {label:'OpenAI · Tokenizer explainer',url:'https://platform.openai.com/tokenizer'}
 };
 let stage = 'map', trained = false, shifted = false, selectedWord = null, comparison = null;
-let foundPairs = new Set(), paperRevealed = false, promptIndex = 0, prediction = null;
+let foundPairs = new Set(), analogyIndex = 0, analogyChoice = null, analogyMatches = 0, promptIndex = 0, prediction = null;
 let earned = 0, finished = false, callbacks = {};
 
 function sourceLinks(items) {
@@ -55,7 +55,10 @@ function mapView() {
 }
 
 function paperView() {
-  return `<div class="wm-body"><div class="wm-kicker">From toy vectors to published research</div><h1 id="embedding-title" tabindex="-1">What else can a word map learn?</h1><p class="wm-context">In a 2016 study, researchers examined a particular static word2vec embedding trained on Google News text. They found a stereotyped association.</p><div class="wm-paper-grid"><div><span>man</span><strong>computer programmer</strong></div><div><span>woman</span><strong id="wm-paper-result" tabindex="-1">${paperRevealed ? 'homemaker' : '?'}</strong></div></div>${paperRevealed ? `<div class="wm-paper-explain" role="status"><strong>That was the studied embedding’s association.</strong><p>It reflects a gender stereotype encoded in that representation. It does not describe people’s abilities, and the paper did not test today’s chatbots.</p></div>` : '<p class="wm-paper-prompt">Tap below to reveal the association reported in the paper.</p>'}${sourceLinks([sources.paper])}</div><div class="wm-footer"><p>${paperRevealed ? 'A learned association needs scrutiny.' : 'A real study, not our toy corpus.'}</p><button class="primary" type="button" data-wm-paper-next>${paperRevealed ? 'Try next-word prediction →' : 'Reveal the finding →'}</button></div>`;
+  const analogy = PAPER_ANALOGIES[analogyIndex];
+  const picked = analogyChoice !== null;
+  const compared = picked ? `<div class="wm-paper-comparison" role="status" tabindex="-1"><div><span>Your match</span><strong>${esc(analogyChoice)}</strong></div><div><span>2016 word2vec output</span><strong>${esc(analogy.output)}</strong></div></div><div class="wm-paper-explain"><strong>${analogyChoice === analogy.output ? 'You matched the model’s output.' : 'Your choice differed from the model’s output.'}</strong><p>${esc(analogy.explanation)}</p>${analogyIndex === 1 ? '<p>This was a static embedding trained on Google News text. It was not a live prediction from today’s chatbots.</p>' : ''}</div>` : '';
+  return `<div class="wm-body"><div class="wm-kicker">Match the vectors · ${analogyIndex + 1} of ${PAPER_ANALOGIES.length}</div><h1 id="embedding-title" tabindex="-1">What did this word model predict?</h1><p class="wm-context">A 2016 paper tested a static word2vec embedding trained on Google News text. Pick the word you think its vector arithmetic returned. Then compare your choice with its published output.</p><div class="wm-paper-grid" aria-label="Man is to ${esc(analogy.prompt)} as woman is to what?"><div><span>man is to</span><strong>${esc(analogy.prompt)}</strong></div><div><span>woman is to</span><strong>${picked ? esc(analogyChoice) : '?'}</strong></div></div><h2 class="wm-action-title">Man : ${esc(analogy.prompt)} :: woman : ?</h2><div class="wm-analogy-choices" role="group" aria-label="Choose a word to complete the analogy">${analogy.choices.map(choice => `<button type="button" data-wm-paper-choice="${esc(choice)}" class="${analogyChoice === choice ? 'is-picked' : ''}" ${picked ? 'disabled' : ''}>${esc(choice)}</button>`).join('')}</div>${compared}${sourceLinks([sources.paper])}</div><div class="wm-footer"><p>${picked ? 'A match with the model is not a score of your judgment.' : 'Make your match to see the model’s output.'}</p>${picked ? `<button class="primary" type="button" data-wm-paper-next>${analogyIndex === PAPER_ANALOGIES.length - 1 ? 'Try next-word prediction →' : 'Next match →'}</button>` : ''}</div>`;
 }
 
 function tokenChips(prefix) {
@@ -76,7 +79,7 @@ function predictView() {
 }
 
 function completeView() {
-  return `<div class="wm-body wm-finish"><div class="wm-kicker">The Word Map · Complete</div><div class="wm-finish-mark" aria-hidden="true">✓</div><h1 id="embedding-title" tabindex="-1">You found the pattern.</h1><p>You built toy context vectors, inspected a real word-embedding finding, and watched a next-word count change with the context.</p><div class="wm-finish-steps"><span>✓ Build the vectors</span><span>✓ Predict twice</span></div><div class="wm-result"><strong>+${earned}</strong><span>XP earned today</span></div><p class="wm-boundary">This activity does not run word2vec or a language model. It is practice, not a test of AI fluency.</p><div class="wm-reading"><h2>Explore the ideas</h2>${sourceLinks([sources.embeddings, sources.paper, sources.tokens])}</div></div><div class="wm-footer"><button class="wm-secondary" type="button" data-wm-replay>Play again</button><button class="primary" type="button" data-wm-close>Back to Fluent</button></div>`;
+  return `<div class="wm-body wm-finish"><div class="wm-kicker">The Word Map · Complete</div><div class="wm-finish-mark" aria-hidden="true">✓</div><h1 id="embedding-title" tabindex="-1">You found the pattern.</h1><p>You built toy context vectors, compared your matches with two published word2vec outputs, and watched a next-word count change with the context.</p><div class="wm-finish-steps"><span>✓ Build the vectors</span><span>✓ Compare 2 matches</span><span>✓ Predict twice</span></div><p class="wm-match-result">Your choices matched the historical word model ${analogyMatches} of ${PAPER_ANALOGIES.length} times. Matching its biased output is not a measure of good judgment.</p><div class="wm-result"><strong>+${earned}</strong><span>XP earned today</span></div><p class="wm-boundary">This activity does not run word2vec or a language model. It is practice, not a test of AI fluency.</p><div class="wm-reading"><h2>Explore the ideas</h2>${sourceLinks([sources.embeddings, sources.paper, sources.tokens])}</div></div><div class="wm-footer"><button class="wm-secondary" type="button" data-wm-replay>Play again</button><button class="primary" type="button" data-wm-close>Back to Fluent</button></div>`;
 }
 
 function render() {
@@ -86,8 +89,14 @@ function render() {
   dialog.querySelectorAll('[data-wm-word]').forEach(button => button.addEventListener('click', () => chooseWord(button.dataset.wmWord)));
   dialog.querySelector('[data-wm-shift]')?.addEventListener('click', () => { shifted = true; comparison = null; renderKeepPosition('.wm-shift'); });
   dialog.querySelector('[data-wm-paper]')?.addEventListener('click', () => { stage = 'paper'; render(); focusTitle(); });
+  dialog.querySelectorAll('[data-wm-paper-choice]').forEach(button => button.addEventListener('click', () => {
+    if (analogyChoice !== null) return;
+    analogyChoice = button.dataset.wmPaperChoice;
+    if (analogyChoice === PAPER_ANALOGIES[analogyIndex].output) analogyMatches++;
+    renderKeepPosition('.wm-paper-comparison');
+  }));
   dialog.querySelector('[data-wm-paper-next]')?.addEventListener('click', () => {
-    if (!paperRevealed) { paperRevealed = true; renderKeepPosition('#wm-paper-result'); }
+    if (analogyIndex < PAPER_ANALOGIES.length - 1) { analogyIndex++; analogyChoice = null; render(); focusTitle(); }
     else { stage = 'predict'; render(); focusTitle(); }
   });
   dialog.querySelectorAll('[data-wm-predict]').forEach(button => button.addEventListener('click', () => {
@@ -125,7 +134,7 @@ function chooseWord(word) {
 }
 function reset() {
   stage = 'map'; trained = false; shifted = false; selectedWord = null; comparison = null;
-  foundPairs = new Set(); paperRevealed = false; promptIndex = 0; prediction = null;
+  foundPairs = new Set(); analogyIndex = 0; analogyChoice = null; analogyMatches = 0; promptIndex = 0; prediction = null;
   earned = 0; finished = false;
 }
 function close() { if (!dialog.open) return; dialog.close(); callbacks.onClose?.(); }
@@ -136,5 +145,5 @@ export function startWordMapGame(options = {}) {
 }
 
 export function wordMapTeaser(compact = false) {
-  return `<section class="word-map-teaser ${compact ? 'is-compact' : ''}" aria-labelledby="word-map-teaser-title${compact ? '-compact' : ''}"><div class="wm-teaser-copy"><div class="wm-kicker">New · Two hands-on games</div><h2 id="word-map-teaser-title${compact ? '-compact' : ''}">The Word Map</h2><p>Build a tiny word vector. Then guess what comes next when the context changes.</p><button class="small-start" type="button" data-word-map>Play the Word Map <span aria-hidden="true">→</span></button></div><div class="wm-teaser-art" aria-hidden="true"><span>words</span><i></i><span>vectors</span><i></i><span>next?</span></div></section>`;
+  return `<section class="word-map-teaser ${compact ? 'is-compact' : ''}" aria-labelledby="word-map-teaser-title${compact ? '-compact' : ''}"><div class="wm-teaser-copy"><div class="wm-kicker">New · Three hands-on experiments</div><h2 id="word-map-teaser-title${compact ? '-compact' : ''}">The Word Map</h2><p>Build tiny vectors, match your guesses against a word model, and predict what comes next.</p><button class="small-start" type="button" data-word-map>Play the Word Map <span aria-hidden="true">→</span></button></div><div class="wm-teaser-art" aria-hidden="true"><span>words</span><i></i><span>vectors</span><i></i><span>next?</span></div></section>`;
 }
