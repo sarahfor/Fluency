@@ -10,7 +10,7 @@ export function submitAnswer(state,session,question,selection,today=dayKey()){
   const first=!session.attempted.includes(question.id);
   if(first){session.attempted.push(question.id);if(session.correct)session.firstCorrect++;}
   if(!state.seen.includes(question.term))state.seen.push(question.term);
-  if(session.correct){session.earned+=award(state,question.id,10,today);if(session.review)state.missed=state.missed.filter(id=>id!==question.id);}
+  if(session.correct){if(session.review)state.missed=state.missed.filter(id=>id!==question.id);}
   else if(!state.missed.includes(question.id))state.missed.push(question.id);
   return true;
 }
@@ -18,7 +18,7 @@ export function nextQuestion(state,session,today=dayKey()){
   if(!session.checked)return false;
   if(!session.correct)session.queue.push(session.queue[session.index]);
   session.index++;session.selected=null;session.checked=false;session.correct=false;
-  if(session.index>=session.queue.length){session.stage='complete';if(!session.finished){if(!session.review&&!state.completed.includes(session.lesson)){state.completed.push(session.lesson);session.earned+=award(state,`lesson-${session.lesson}`,10,today);}session.finished=true;}}
+  if(session.index>=session.queue.length){session.stage='complete';if(!session.finished){if(!session.review&&!state.completed.includes(session.lesson))state.completed.push(session.lesson);session.finished=true;}}
   return true;
 }
 export function loadState(raw,content){

@@ -12,18 +12,18 @@ const rounds=[
   {situation:'You want to ask an AI a question aloud, hear its answer, and ask a follow-up.',answer:'conversation',order:['dictation','transcription','conversation']}
 ];
 
-let game=null,onComplete=()=>0,returnFocus=null;
+let game=null,onComplete=()=>{},onClose=()=>{},returnFocus=null;
 
 export function voiceGameTeaser(){
   return `<section class="voice-game-teaser" aria-labelledby="voice-teaser-title"><div><div class="eyebrow">Everyday AI · A quick game</div><h2 id="voice-teaser-title">Speak, then what?</h2><p>Pick a voice tool for three familiar tasks. Catch one mistake before you send.</p><button class="small-start" data-voice-game>Play the voice game <span aria-hidden="true">→</span></button></div><div class="voice-teaser-art" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></section>`;
 }
 
-function newGame(){return {round:0,stage:'choose',choice:null,solved:false,replacement:null,repairError:false,earned:0};}
+function newGame(){return {round:0,stage:'choose',choice:null,solved:false,replacement:null,repairError:false};}
 
 function focusTitle(){dialog.querySelector('#voice-game-title')?.focus({preventScroll:true});dialog.querySelector('.voice-game-body').scrollTop=0;}
 
 function closeGame(){
-  dialog.close();game=null;
+  dialog.close();game=null;onClose();
   const target=returnFocus?.isConnected?returnFocus:document.querySelector('[data-voice-game]');
   target?.focus({preventScroll:true});returnFocus=null;
 }
@@ -39,7 +39,7 @@ function repairScreen(){
 }
 
 function resultScreen(){
-  return `<div class="voice-finish"><div class="voice-finish-mark" aria-hidden="true">✓</div><div class="eyebrow">Voice game complete</div><h1 id="voice-game-title" tabindex="-1">You caught it before sending.</h1><p>You chose a voice tool for three jobs and corrected a name in a dictated message.</p><p class="voice-xp">${game.earned?`+${game.earned} XP for today`:'You can replay whenever you like.'}</p><div class="voice-takeaway"><h2>Keep the three jobs straight</h2><ul><li><strong>Dictation:</strong> speech becomes text you can edit.</li><li><strong>Transcription:</strong> a recording becomes written words.</li><li><strong>Voice conversation:</strong> you speak with an assistant and hear a response.</li></ul></div><details class="voice-sources"><summary>Real examples and sources</summary><p><a href="https://docs.wisprflow.ai/articles/2772472373-what-is-flow" target="_blank" rel="noopener noreferrer">Wispr Flow</a> is a dictation app. <a href="https://developers.openai.com/api/docs/guides/transcription" target="_blank" rel="noopener noreferrer">OpenAI’s transcription guide</a> explains speech-to-text workflows. <a href="https://support.google.com/gemini/answer/15274899" target="_blank" rel="noopener noreferrer">Gemini Live</a> is a voice conversation experience. These are product examples, not endorsements. The scenes and recording above are authored simulations.</p></details></div>`;
+  return `<div class="voice-finish"><div class="voice-finish-mark" aria-hidden="true">✓</div><div class="eyebrow">Voice game complete</div><h1 id="voice-game-title" tabindex="-1">You caught it before sending.</h1><p>You chose a voice tool for three jobs and corrected a name in a dictated message.</p><div class="voice-takeaway"><h2>Keep the three jobs straight</h2><ul><li><strong>Dictation:</strong> speech becomes text you can edit.</li><li><strong>Transcription:</strong> a recording becomes written words.</li><li><strong>Voice conversation:</strong> you speak with an assistant and hear a response.</li></ul></div><details class="voice-sources"><summary>Real examples and sources</summary><p><a href="https://docs.wisprflow.ai/articles/2772472373-what-is-flow" target="_blank" rel="noopener noreferrer">Wispr Flow</a> is a dictation app. <a href="https://developers.openai.com/api/docs/guides/transcription" target="_blank" rel="noopener noreferrer">OpenAI’s transcription guide</a> explains speech-to-text workflows. <a href="https://support.google.com/gemini/answer/15274899" target="_blank" rel="noopener noreferrer">Gemini Live</a> is a voice conversation experience. These are product examples, not endorsements. The scenes and recording above are authored simulations.</p></details></div>`;
 }
 
 function render(){
@@ -65,7 +65,7 @@ function render(){
     if(game.replacement!=='Maya'){
       game.repairError=true;render();dialog.querySelector('.voice-feedback')?.focus({preventScroll:true});return;
     }
-    game.earned=onComplete();game.stage='done';render();focusTitle();
+    onComplete();game.stage='done';render();focusTitle();
   });
   dialog.querySelector('[data-voice-replay]')?.addEventListener('click',()=>{game=newGame();render();focusTitle();});
 }
@@ -74,5 +74,5 @@ dialog.addEventListener('cancel',event=>{event.preventDefault();closeGame();});
 
 export function startVoiceGame(options={}){
   if(dialog.open)return;
-  onComplete=options.onComplete||(()=>0);returnFocus=document.activeElement;game=newGame();render();dialog.showModal();focusTitle();
+  onComplete=options.onComplete||(()=>{});onClose=options.onClose||(()=>{});returnFocus=document.activeElement;game=newGame();render();dialog.showModal();focusTitle();
 }
