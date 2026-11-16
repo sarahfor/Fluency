@@ -12,7 +12,7 @@ For complete author–date citations and a clear distinction between research, p
 | Small steps with feedback | The [Duolingo Method](https://blog.duolingo.com/duolingo-teaching-method/) describes moving from simpler pattern recognition to harder application. | Each terminology lesson has three discovery challenges followed by five application questions. A wrong choice invites another attempt. |
 | Visible progress | [Duolingo 101](https://blog.duolingo.com/duolingo-101-how-to-learn-a-language-on-duolingo/) documents short lessons and visible progress. | Fluent marks games and lessons played on one path. There is no XP, streak, or daily goal in the interface. Mistakes do not cost hearts. |
 | Review rather than only accumulation | Duolingo's [Time Spent Learning Well](https://blog.duolingo.com/time-spent-learning-well/) article describes practice as part of progress. | Fluent has a missed-question practice queue. A completion mark records participation, not AI fluency or learning effectiveness. |
-| Varied exercise formats | Duolingo describes [matching, mistake review, and other practice types](https://blog.duolingo.com/ways-to-practice-in-duolingo/). | Fluent offers the four-move everyday path, logo and model matching, one historical word-model prediction, scene choices, and application questions. |
+| Varied exercise formats | Duolingo describes [matching, mistake review, and other practice types](https://blog.duolingo.com/ways-to-practice-in-duolingo/). | Fluent offers the four-move everyday path, logo and model matching, ten historical word-model pairings, scene choices, and application questions. |
 
 ## Try AI in everyday life
 
@@ -30,7 +30,7 @@ Reviewed November 8, 2026. **Speak, then what?** is a separate voice-tools game 
 
 ## What did the model predict?
 
-Reviewed November 15, 2026. This one-question game asks players to guess the historical static word2vec output reported by [Bolukbasi et al. (2016)](https://arxiv.org/pdf/1607.06520) for man:computer programmer :: woman:?. The published output was homemaker, which the authors identify as a gender stereotype. The other answer choices were written for Fluent. Players compare their guess with the published output, but the game does not score a match as good judgment or infer anything about the player. It does not run word2vec or a modern language model.
+Reviewed November 15, 2026. Ten short rounds ask players to guess published analogy pairings from the historical static word2vec embedding discussed by [Bolukbasi et al. (2016)](https://arxiv.org/pdf/1607.06520). The sequence moves from familiar gendered word pairs in the Introduction and Figure 2 toward social and occupational stereotypes, ending with man:computer programmer :: woman:homemaker. Figure 2's stereotype grouping reflects the paper's crowd-worker ratings. Answer choices and the increasing-difficulty order were written for Fluent; the paper did not evaluate this game or its difficulty. Each round compares a guess with a reported pairing and links to the relevant paper page. The model-match count is descriptive, not a judgment score. The game does not run word2vec or a modern language model.
 
 ## Interaction rules
 

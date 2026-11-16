@@ -6,7 +6,7 @@ The everyday game gives an authored result before naming the concept. Its scenes
 
 **Live site:** https://sarahfor.github.io/Fluency/
 
-**What did the model predict?** asks one question: what a historical word2vec embedding returned for “man is to computer programmer as woman is to ?” Players compare their guess with the output reported in [Bolukbasi et al. (2016)](https://arxiv.org/pdf/1607.06520). The output reflects a gender stereotype. Matching it is not scored as a good answer; the game does not run the model or a current chatbot.
+**What did the model predict?** now has ten matching rounds based on analogies reported in [Bolukbasi et al. (2016)](https://arxiv.org/pdf/1607.06520). Familiar gendered relationships come first; later rounds show associations the paper identifies as stereotypes. Players compare each guess with the published pairing. Their model-match count is not a judgment score. The answer choices and increasing-difficulty order are authored for Fluent; the game does not run the model or a current chatbot.
 
 Sources are linked beside the learning activities. The map marks games and lessons played; it is not a fluency score. Progress is saved in your browser. There is no account, backend, or cross-device sync.
 
@@ -24,4 +24,4 @@ Then open http://127.0.0.1:4176/.
 
 ## Code and research
 
-This repository contains the static browser app used by GitHub Pages. The lesson and game content lives in `content.json`, `activities.json`, and `embedding-game-data.js`; the client-side logic is in the JavaScript modules. The [2016 word-embeddings paper](https://arxiv.org/pdf/1607.06520) supports the historical output in **What did the model predict?** Its answer choices are authored for the game. The [research references](RESEARCH_REFERENCES.md) give full citations and explain how each source relates to Fluent.
+This repository contains the static browser app used by GitHub Pages. The lesson and game content lives in `content.json`, `activities.json`, and `embedding-game-data.js`; the client-side logic is in the JavaScript modules. The [2016 word-embeddings paper](https://arxiv.org/pdf/1607.06520) supports the historical pairings in **What did the model predict?** Its answer choices and round order are authored for the game. The [research references](RESEARCH_REFERENCES.md) give full citations and explain how each source relates to Fluent.
