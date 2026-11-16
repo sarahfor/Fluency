@@ -1,6 +1,6 @@
 # Fluent game design notes
 
-Reviewed November 8, 2026. Fluent is an independent AI literacy prototype for the public. These are product-design references, not evidence that Fluent improves learning outcomes.
+Reviewed November 15, 2026. Fluent is an independent AI literacy prototype for the public. These are product-design references, not evidence that Fluent improves learning outcomes.
 
 For complete author–date citations and a clear distinction between research, product descriptions, and further reading, see [Research references](RESEARCH_REFERENCES.md).
 
@@ -12,7 +12,7 @@ For complete author–date citations and a clear distinction between research, p
 | Small steps with feedback | The [Duolingo Method](https://blog.duolingo.com/duolingo-teaching-method/) describes moving from simpler pattern recognition to harder application. | Each terminology lesson has three discovery challenges followed by five application questions. A wrong choice invites another attempt. |
 | Visible progress | [Duolingo 101](https://blog.duolingo.com/duolingo-101-how-to-learn-a-language-on-duolingo/) documents short lessons and visible progress. | Fluent marks games and lessons played on one path. There is no XP, streak, or daily goal in the interface. Mistakes do not cost hearts. |
 | Review rather than only accumulation | Duolingo's [Time Spent Learning Well](https://blog.duolingo.com/time-spent-learning-well/) article describes practice as part of progress. | Fluent has a missed-question practice queue. A completion mark records participation, not AI fluency or learning effectiveness. |
-| Varied exercise formats | Duolingo describes [matching, mistake review, and other practice types](https://blog.duolingo.com/ways-to-practice-in-duolingo/). | Fluent offers the four-move everyday path, logo and model matching, word-vector and next-word experiments, scene choices, and application questions. |
+| Varied exercise formats | Duolingo describes [matching, mistake review, and other practice types](https://blog.duolingo.com/ways-to-practice-in-duolingo/). | Fluent offers the four-move everyday path, logo and model matching, one historical word-model prediction, scene choices, and application questions. |
 
 ## Try AI in everyday life
 
@@ -22,15 +22,15 @@ The message and follow-up scenes use [OpenAI's prompting guide](https://help.ope
 
 ## Build a tiny app
 
-Added November 15, 2026. This is its own game on the progress map. Players give a checklist app a purpose and first item, test its working preview, request a progress bar, and download a standalone HTML file. It follows the prompt → build → test → revise sequence described in [GitHub's vibe coding tutorial](https://docs.github.com/en/copilot/tutorials/vibe-coding), but this guided implementation uses a fixed template and no live AI model. Its purpose is to let a beginner make and modify something functional, not to demonstrate AI code generation.
+Added November 15, 2026. This is its own game at the end of the progress map. Players give a checklist app a purpose and first item, test its working preview, request a progress bar, and download a standalone HTML file. It follows the prompt → build → test → revise sequence described in [GitHub's vibe coding tutorial](https://docs.github.com/en/copilot/tutorials/vibe-coding), but this guided implementation uses a fixed template and no live AI model. Its purpose is to let a beginner make and modify something functional, not to demonstrate AI code generation.
 
 ## Everyday voice game
 
 Reviewed November 8, 2026. **Speak, then what?** is a separate voice-tools game on the map. Players choose dictation, transcription, or voice conversation for three authored situations, then correct a simulated name error before a simulated send. It uses no microphone, records no audio, and sends no message. Each reveal links to the source for its concept: [Wispr Flow's dictation guide](https://docs.wisprflow.ai/articles/2772472373-what-is-flow), [OpenAI's transcription guide](https://developers.openai.com/api/docs/guides/transcription), and [Google's Gemini Live guide](https://support.google.com/gemini/answer/15274899). These product documents define the categories; they do not show that the game improves learning.
 
-## Word Map analogy matching
+## What did the model predict?
 
-Reviewed November 15, 2026. After building authored toy context vectors, players complete two analogies and compare their choices with the historical static word2vec outputs reported by [Bolukbasi et al. (2016)](https://arxiv.org/pdf/1607.06520): man:king :: woman:queen, then man:computer programmer :: woman:homemaker. The second output is a gender stereotype identified by the authors. Players see whether they matched the published output, but the game does not mark that match as a good answer or infer anything about the player. The activity does not run word2vec or a modern language model.
+Reviewed November 15, 2026. This one-question game asks players to guess the historical static word2vec output reported by [Bolukbasi et al. (2016)](https://arxiv.org/pdf/1607.06520) for man:computer programmer :: woman:?. The published output was homemaker, which the authors identify as a gender stereotype. The other answer choices were written for Fluent. Players compare their guess with the published output, but the game does not score a match as good judgment or infer anything about the player. It does not run word2vec or a modern language model.
 
 ## Interaction rules
 
