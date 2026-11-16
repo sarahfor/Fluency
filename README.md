@@ -2,7 +2,7 @@
 
 A public, web-first AI learning prototype for anyone. **Know the Logo** opens the site. The progress map moves through everyday AI, voice tools, **Know the Model**, a word-embedding prediction challenge, and five short terminology lessons before **Build a tiny app**.
 
-The everyday game gives an authored result before naming the concept. Its scenes do not call a live model or send a message. **Build a tiny app** is a separate game: players describe, test, improve, and download a working checklist app. It uses a browser template rather than a live AI coding model. The terminology lessons begin with three quick scene challenges: choose an example, get immediate feedback, then reveal the concept and illustration. See [GAME_DESIGN.md](GAME_DESIGN.md) for the Duolingo product references, the mechanics used here, and the limits of this prototype.
+The everyday game gives an authored result before naming the concept. Its scenes do not call a live model or send a message. **Build a tiny app** is a separate game: players choose a reading tracker, flashcard deck, focus timer, or checklist; fill in a brief that updates as they type; test a working preview; add a feature; and download a standalone HTML app. It uses guided browser templates rather than a live AI coding model. The terminology lessons begin with three quick scene challenges: choose an example, get immediate feedback, then reveal the concept and illustration. See [GAME_DESIGN.md](GAME_DESIGN.md) for the Duolingo product references, the mechanics used here, and the limits of this prototype.
 
 **Live site:** https://sarahfor.github.io/Fluency/
 

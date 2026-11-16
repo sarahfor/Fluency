@@ -22,7 +22,7 @@ The message and follow-up scenes use [OpenAI's prompting guide](https://help.ope
 
 ## Build a tiny app
 
-Added November 15, 2026. This is its own game at the end of the progress map. Players give a checklist app a purpose and first item, test its working preview, request a progress bar, and download a standalone HTML file. It follows the prompt → build → test → revise sequence described in [GitHub's vibe coding tutorial](https://docs.github.com/en/copilot/tutorials/vibe-coding), but this guided implementation uses a fixed template and no live AI model. Its purpose is to let a beginner make and modify something functional, not to demonstrate AI code generation.
+Updated November 15, 2026. This is its own game at the end of the progress map. Players pick one of four functional formats: reading tracker, flashcard deck, focus timer, or checklist. Fill-in-the-blank fields update the plain-language build request live. Players test a working preview, add a format-specific feature, and download a standalone HTML file. The reading tracker records books and pages; the flashcards flip and can grow into a deck; the timer starts and pauses; the checklist tracks tasks. It follows the prompt → build → test → revise sequence described in [GitHub's vibe coding tutorial](https://docs.github.com/en/copilot/tutorials/vibe-coding), but this guided implementation uses local templates and no live AI model. Its purpose is to let a beginner make and modify something functional, not to demonstrate AI code generation.
 
 ## Everyday voice game
 
